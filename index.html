@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Memes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Generador de Memes</h1>
+            <nav>
+                <button type="button">Imagen</button>
+                <button type="button">Texto</button>
+                <button type="button">MD</button>
+            </nav>
+        </header>
+        <div class="meme-generator">
+            <h2></h2>
+            <div>
+                <img src="" alt="">
+            </div>
+            <h2></h2>
+        </div>
+        <button type="button">Descargar meme</button>
+    </main>
+    <aside id="aside-img">
+        <h3 class="title-image">IMAGEN</h3>
+        <label for="">URL</label>
+        <input type="text" class="url-input">
+        <label for="">FONDO</label>
+        <div class="container-background">
+            <input type="color" class="background-input">
+            <select name="" id="" class="background-select">
+                <option value="">Ninguno</option>
+                <option value="">Aclarar</option>
+                <option value="">Oscurecer</option>
+                <option value="">Diferencia</option>
+                <option value="">Luminosidad</option>
+                <option value="">Multiplicar</option>
+            </select>
+        </div>
+        <div class="slidecontainer">
+            <label for="">BRILLO</label>
+            <input type="range" min="1" max="100" value="50" class="slider">
+            <label for="">OPACIDAD</label>
+            <input type="range" min="1" max="100" value="50" class="slider">
+            <label for="">CONTRASTE</label>
+            <input type="range" min="1" max="100" value="50" class="slider">
+            <label for="">DESENFOQUE</label>
+            <input type="range" min="1" max="100" value="50" class="slider">
+            <label for="">ESCALA DE GRISES</label>
+            <input type="range" min="1" max="100" value="50" class="slider">
+            <label for="">SEPIA</label>
+            <input type="range" min="1" max="100" value="50" class="slider">
+            <label for="">HUE</label>
+            <input type="range" min="1" max="100" value="50" class="slider">
+            <label for="">SATURADO</label>
+            <input type="range" min="1" max="100" value="50" class="slider">
+            <label for="">NEGATIVO</label>
+            <input type="range" min="1" max="100" value="50" class="slider">
+        </div>
+        <button type="reset" class="reset">Reestablecer filtros</button>
+    </aside>
+    <aside id="aside-text">
+        <h3>TEXTO</h3>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
