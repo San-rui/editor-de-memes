@@ -115,3 +115,25 @@ i{
     width: 90%;
     height:30px;
 }
+.height-30{
+    height: 30px;
+}
+.padding-7{
+    padding-left: 7px;
+}
+.flex{
+    display: flex;
+}
+.grow-1{
+    flex-grow: 1;
+}
+.grow-3{
+    flex-grow: 3;
+}
+.format-button-justify{
+    margin-left: 7px;
+    padding-left: 7px;
+}
+.margin-sides{
+    margin: 0px 7px;
+}
