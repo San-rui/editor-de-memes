@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor de Memes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7538d07a3c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main>
-        <header>
+    <header>
             <h1>Generador de Memes</h1>
             <nav>
-                <button type="button">Imagen</button>
-                <button type="button">Texto</button>
-                <button type="button">MD</button>
+                <button type="button"><i class="far fa-file-image"></i>Imagen</button>
+                <button type="button"><i class="fas fa-font"></i>Texto</button>
+                <button type="button"><i class="far fa-lightbulb"></i>
+                    <span>Modo oscuro</span>
+                    <span>Modo claro</span>
+                </button>
             </nav>
-        </header>
+    </header>
+    <main>
         <div class="meme-generator">
             <h2></h2>
             <div>
@@ -24,48 +28,108 @@
             </div>
             <h2></h2>
         </div>
-        <button type="button">Descargar meme</button>
+        <button type="button"><i class="fas fa-download"></i>Descargar meme</button>
     </main>
     <aside id="aside-img">
-        <h3 class="title-image">IMAGEN</h3>
-        <label for="">URL</label>
-        <input type="text" class="url-input">
-        <label for="">FONDO</label>
-        <div class="container-background">
-            <input type="color" class="background-input">
-            <select name="" id="" class="background-select">
-                <option value="">Ninguno</option>
-                <option value="">Aclarar</option>
-                <option value="">Oscurecer</option>
-                <option value="">Diferencia</option>
-                <option value="">Luminosidad</option>
-                <option value="">Multiplicar</option>
-            </select>
-        </div>
-        <div class="slidecontainer">
-            <label for="">BRILLO</label>
-            <input type="range" min="1" max="100" value="50" class="slider">
-            <label for="">OPACIDAD</label>
-            <input type="range" min="1" max="100" value="50" class="slider">
-            <label for="">CONTRASTE</label>
-            <input type="range" min="1" max="100" value="50" class="slider">
-            <label for="">DESENFOQUE</label>
-            <input type="range" min="1" max="100" value="50" class="slider">
-            <label for="">ESCALA DE GRISES</label>
-            <input type="range" min="1" max="100" value="50" class="slider">
-            <label for="">SEPIA</label>
-            <input type="range" min="1" max="100" value="50" class="slider">
-            <label for="">HUE</label>
-            <input type="range" min="1" max="100" value="50" class="slider">
-            <label for="">SATURADO</label>
-            <input type="range" min="1" max="100" value="50" class="slider">
-            <label for="">NEGATIVO</label>
-            <input type="range" min="1" max="100" value="50" class="slider">
-        </div>
-        <button type="reset" class="reset">Reestablecer filtros</button>
+        <h3 class="title-aside">IMAGEN</h3>
+        <form>
+            <label for="">URL</label>
+            <input type="text" class="url-input">
+            <label for="">FONDO</label>
+            <div class="container-background">
+                <input type="color" class="size_input-select">
+                <select name="" id="" class="size_input-select">
+                    <option value="">Ninguno</option>
+                    <option value="">Aclarar</option>
+                    <option value="">Oscurecer</option>
+                    <option value="">Diferencia</option>
+                    <option value="">Luminosidad</option>
+                    <option value="">Multiplicar</option>
+                </select>
+            </div>
+            <div class="slidecontainer">
+                <label for="">BRILLO</label>
+                <input type="range" min="1" max="100" value="50" class="slider">
+                <label for="">OPACIDAD</label>
+                <input type="range" min="1" max="100" value="50" class="slider">
+                <label for="">CONTRASTE</label>
+                <input type="range" min="1" max="100" value="50" class="slider">
+                <label for="">DESENFOQUE</label>
+                <input type="range" min="1" max="100" value="50" class="slider">
+                <label for="">ESCALA DE GRISES</label>
+                <input type="range" min="1" max="100" value="50" class="slider">
+                <label for="">SEPIA</label>
+                <input type="range" min="1" max="100" value="50" class="slider">
+                <label for="">HUE</label>
+                <input type="range" min="1" max="100" value="50" class="slider">
+                <label for="">SATURADO</label>
+                <input type="range" min="1" max="100" value="50" class="slider">
+                <label for="">NEGATIVO</label>
+                <input type="range" min="1" max="100" value="50" class="slider">
+            </div>
+            <button type="reset" class="reset">Reestablecer filtros</button>
+        </form>
     </aside>
     <aside id="aside-text">
-        <h3>TEXTO</h3>
+        <h3 class="title-aside">TEXTO</h3>
+        <form class="form-text">
+            <label for="">SUPERIOR</label>
+            <input type="text"
+            placeholder="TOP TEXT" class="margin-top-bottom">
+            <label><input type="checkbox" /> Sin texto superior</label>
+            <label for="" class="margin-top-bottom">INFERIOR</label>
+            <input type="text"
+            placeholder="BOTTOM TEXT"
+            class="margin-top-bottom">
+            <label><input type="checkbox" /> Sin texto inferior</label>
+            <label for="" class="margin-top-bottom">FUENTE</label>
+            <select name="" id="" value="Impact" class="margin-top-bottom">
+                <option value="">Arial</option>
+                <option value="">Arial black</option>
+                <option value="">American Typewriter</option>
+                <option value="">Andale Mono</option>
+                <option value="">Comic Sans MS</option>
+                <option value="">Helvetica</option>
+                <option value="">Impact</option>
+                <option value="">Verdana</option>
+                <option value="">Times New Roman</option>
+            </select>
+            <div class="margin-top-bottom">
+                <input type="number" name="" id="" value="40" min="12" max="">
+                <button><i class="fas fa-align-left"></i></button>
+                <button><i class="fas fa-align-center"></i></button>
+                <button><i class="fas fa-align-right"></i></button>
+            </div>
+            <div class="margin-top-bottom row">
+                <div class="column size_input-select_text"> 
+                    <label for="" >COLOR</label>
+                    <input type="color" class="input_color_for_text">
+                </div>
+                <div class="column size_input-select_text">
+                    <label for="">FONDO</label>
+                    <input type="color" class="input_color_for_text">
+                </div>
+            </div>
+            <label><input type="checkbox" class="margin-top-bottom"/> Fondo transparente</label>
+            <label for="">CONTORNO</label>
+            <div class="margin-top-bottom">
+                <button>Ninguno</button>
+                <button>Claro</button>
+                <button>Oscuro</button>
+            </div>
+            <label for="">ESPACIADO</label>
+            <input type="number" name="" id="" value="35" min="10" max="50" class="margin-top-bottom">
+            <label for="">INTERLINEADO</label>
+            <select name="" id="" class="margin-top-bottom">
+                <option value="">0.8</option>
+                <option value="">1</option>
+                <option value="">1.2</option>
+                <option value="">1.5</option>
+                <option value="">2</option>
+                <option value="">2.5</option>
+            </select>
+            
+        </form>
     </aside>
 
     <script src="script.js"></script>
