@@ -27,6 +27,11 @@ header{
 i{
     margin-right: 7px;
 }
+img{
+    width: 200px;
+    height: 150px;
+    background-color:rosybrown;
+}
 
 #aside-text{
     width:20%;
@@ -38,6 +43,7 @@ i{
     position:fixed;
     top:0px;
     right: 0px;
+    display:none;
     
 }
 #aside-img{
@@ -50,7 +56,7 @@ i{
     position:fixed;
     top:0px;
     right: 0px;
-    display:none;
+    
 
 }
 .slidecontainer{
