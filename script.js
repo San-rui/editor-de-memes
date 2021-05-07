@@ -6,8 +6,8 @@ let colorPicked= document.querySelector('#colorPicked');
 
 
 function getUrlImage()
-{ 
-    let srcMeme = imgInput.value   
+{
+    let srcMeme = imgInput.value
     console.log(srcMeme)
     const memeImg = document.querySelector('img');
     console.log(memeImg)
@@ -24,19 +24,16 @@ const changeBackgroundImage=()=>{
 colorPicked.addEventListener('input', changeBackgroundImage);
 
 const selectBlend= document.querySelector('#select-blend');
-const optionsBlend= document.getElementsByClassName('option-blend');
 
+const changeBlendMode=()=>{
+    
+    let selectedValue = document.getElementById("select-blend").value;
+    console.log(selectedValue);
 
-const changeBlendMode=(event)=>{
-    const button=event.target;
-    const optionBlend=button.getAttribute('data-option-blend');
-    console.log(optionBlend);
+    memeImg.style=`background-blend-mode:${selectedValue}`;
+    console.log(memeImg.style);
+    
 
-    for(let i=0; i<optionsBlend.length; i++){
-        if(optionsBlend[i].getAttribute('data-option-blend')==ninguno) {
-            memeImg.style=`background-color:white`
-            }
-    }
 
 }
 selectBlend.addEventListener('input', changeBlendMode);

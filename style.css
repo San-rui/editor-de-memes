@@ -34,7 +34,6 @@ img {
     height: 100%;
     background-position:center;
     background-size: 100%;
-    background-blend-mode:lighten;
 }
 
 #aside-text{
