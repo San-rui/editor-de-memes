@@ -1,27 +1,27 @@
 //Declarado de variables
-const memeImg = document.querySelector('img');
+const memeImg = document.querySelector('#img');
 let imgInput= document.getElementById('image-input')
 let colorPicked= document.querySelector('#colorPicked');
+
 //Seteado de imagen: la url de la imagen ingresada se agrega a la etiqueta img
 
-
-function getUrlImage()
-{
+function getUrlImage(){
     let srcMeme = imgInput.value
-    console.log(srcMeme)
-    const memeImg = document.querySelector('img');
-    console.log(memeImg)
+    const memeImg = document.querySelector('#img');
     memeImg.style.backgroundImage = `url("${srcMeme}")`;
 }
 
-imgInput.addEventListener('keyup', getUrlImage);
+imgInput.addEventListener('change', getUrlImage);
 
 //seteado de color de imagen: con un color picker se cambia el color de la imagen
 
 const changeBackgroundImage=()=>{
-    memeImg.style=`background-color:${colorPicked.value}`
+    const meme2Img = document.querySelector('#img');
+    meme2Img.style.backgroundColor = colorPicked.value;
 }
 colorPicked.addEventListener('input', changeBackgroundImage);
+
+
 
 const selectBlend= document.querySelector('#select-blend');
 
@@ -33,8 +33,6 @@ const changeBlendMode=()=>{
     memeImg.style=`background-blend-mode:${selectedValue}`;
     console.log(memeImg.style);
     
-
-
 }
 selectBlend.addEventListener('input', changeBlendMode);
 
