@@ -23,8 +23,8 @@
     <main>
         <div class="meme-generator">
             <p></p>
-            <div>
-                <img src="" alt="Imagen de meme" aria-label="Imagen de meme">
+            <div class="overflow image-box-style">
+                <img src="" alt="" aria-label="Imagen de meme">
             </div>
             <p></p>
         </div>
@@ -37,14 +37,17 @@
             <input type="text" class="url-input" id="image-input">
             <label for="">FONDO</label>
             <div class="container-background">
-                <input type="color" class="size_input-select">
-                <select name="" id="" class="size_input-select">
-                    <option value="">Ninguno</option>
-                    <option value="">Aclarar</option>
-                    <option value="">Oscurecer</option>
-                    <option value="">Diferencia</option>
-                    <option value="">Luminosidad</option>
-                    <option value="">Multiplicar</option>
+                <div class="container-color size_input-select">
+                    <input type="color" class="size_input-select input-color-style" id="colorPicked">
+                    <label for="">#FFFFFF</label>
+                </div>
+                <select name="" id="select-blend" class="size_input-select">
+                    <option value="" data-option-blend="ninguno">Ninguno</option>
+                    <option value="" data-option-blend="aclarar">Aclarar</option>
+                    <option value="" data-option-blend="oscurecer">Oscurecer</option>
+                    <option value="" data-option-blend="diferencia">Diferencia</option>
+                    <option value="" data-option-blend="luminosidad">Luminosidad</option>
+                    <option value="" data-option-blend="multiplicar">Multiplicar</option>
                 </select>
             </div>
             <div class="slidecontainer">
