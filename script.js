@@ -23,12 +23,21 @@ const changeBackgroundImage=()=>{
 }
 colorPicked.addEventListener('input', changeBackgroundImage);
 
-const selectBlend= document.querySelector('#select-blend')
+const selectBlend= document.querySelector('#select-blend');
+const optionsBlend= document.getElementsByClassName('option-blend');
+
 
 const changeBlendMode=(event)=>{
     const button=event.target;
     const optionBlend=button.getAttribute('data-option-blend');
     console.log(optionBlend);
+
+    for(let i=0; i<optionsBlend.length; i++){
+        if(optionsBlend[i].getAttribute('data-option-blend')==ninguno) {
+            memeImg.style=`background-color:white`
+            }
+    }
+
 }
 selectBlend.addEventListener('input', changeBlendMode);
 
