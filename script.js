@@ -21,19 +21,36 @@ const changeBackgroundImage=()=>{
 }
 colorPicked.addEventListener('input', changeBackgroundImage);
 
-
+//----------SETEADO DEL SELECT DE  COLOR BLEND--------------
 
 const selectBlend= document.querySelector('#select-blend');
 
 const changeBlendMode=()=>{
     
-    let selectedValue = document.getElementById("select-blend").value;
-    console.log(selectedValue);
-
-    memeImg.style=`background-blend-mode:${selectedValue}`;
-    console.log(memeImg.style);
-    
+    const meme2Img = document.querySelector('#img');
+    meme2Img.style.backgroundBlendMode = selectBlend.value;
 }
 selectBlend.addEventListener('input', changeBlendMode);
+
+//-------------BOTONES DE PANEL PRINCIPAL-------------------
+
+const buttonImageAside= document.querySelector('#button-image-aside'); 
+const buttonTextAside= document.querySelector('#button-text-aside');
+const asideImg= document.querySelector('#aside-img');
+const asideText= document.querySelector('#aside-text');
+
+const asideCallImage=()=>{
+    asideImg.classList.remove('hidden');
+    asideText.classList.add('hidden');
+}
+buttonImageAside.addEventListener('click', asideCallImage);
+
+const asideCallText=()=>{
+    asideText.classList.remove('hidden');
+    asideImg.classList.add('hidden');
+}
+buttonTextAside.addEventListener('click', asideCallText);
+
+
 
 

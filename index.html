@@ -12,8 +12,8 @@
     <header>
             <h1>Generador de Memes</h1>
             <nav>
-                <button type="button"><i class="far fa-file-image"></i>Imagen</button>
-                <button type="button"><i class="fas fa-font"></i>Texto</button>
+                <button type="button" id="button-image-aside"><i class="far fa-file-image"></i>Imagen</button>
+                <button type="button" id="button-text-aside"><i class="fas fa-font"></i>Texto</button>
                 <button type="button"><i class="far fa-lightbulb"></i>
                     <span>Modo oscuro</span>
                     <span>Modo claro</span>
@@ -30,7 +30,8 @@
         </div>
         <button type="button"><i class="fas fa-download"></i>Descargar meme</button>
     </main>
-    <aside id="aside-img">
+    
+    <aside id="aside-img" class="aside-img">
         <h3 class="title-aside">IMAGEN</h3>
         <form>
             <label for="">URL</label>
@@ -73,7 +74,7 @@
             <button type="reset" class="reset">Reestablecer filtros</button>
         </form>
     </aside>
-    <aside id="aside-text">
+    <aside id="aside-text" class="aside-text hidden">
         <h3 class="title-aside">TEXTO</h3>
         <form class="form-text">
             <label for="">SUPERIOR</label>

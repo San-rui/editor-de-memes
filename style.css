@@ -36,7 +36,7 @@ i{
     background-size: 100%;
 }
 
-#aside-text{
+.aside-text{
     width:20%;
     height: 100%;
     display: flex;
@@ -46,10 +46,9 @@ i{
     position:fixed;
     top:0px;
     right: 0px;
-    display:none;
     
 }
-#aside-img{
+.aside-img{
     width:20%;
     height: 100%;
     display: flex;
@@ -61,6 +60,9 @@ i{
     right: 0px;
     
 
+}
+.hidden{
+    display:none;
 }
 .slidecontainer{
     display: flex;
