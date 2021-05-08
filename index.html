@@ -30,112 +30,111 @@
         </div>
         <button type="button"><i class="fas fa-download"></i>Descargar meme</button>
     </main>
-    
-    <aside id="aside-img" class="aside-img">
-        <h3 class="title-aside">IMAGEN</h3>
-        <form>
-            <label for="">URL</label>
-            <input type="text" class="url-input" id="image-input">
-            <label for="">FONDO</label>
-            <div class="container-background">
-                <div class="container-color size_input-select">
-                    <input type="color" class="size_input-select input-color-style" id="colorPicked">
-                    <label for="">#FFFFFF</label>
+    <aside>
+        <section id="aside-img" class="aside-img">
+            <h3 class="title-aside">IMAGEN</h3>
+            <form>
+                <label for="">URL</label>
+                <input type="text" class="url-input" id="image-input">
+                <label for="">FONDO</label>
+                <div class="container-background">
+                    <div class="container-color size_input-select">
+                        <input type="color" class="size_input-select input-color-style" id="colorPicked">
+                        <label for="">#FFFFFF</label>
+                    </div>
+                    <select name="" id="select-blend" class="size_input-select">
+                        <option class="option-blend" value="normal">Ninguno</option>
+                        <option class="option-blend" value="lighten">Aclarar</option>
+                        <option class="option-blend" value="darken">Oscurecer</option>
+                        <option class="option-blend" value="difference">Diferencia</option>
+                        <option class="option-blend" value="luminosity">Luminosidad</option>
+                        <option class="option-blend" value="multiply">Multiplicar</option>
+                    </select>
                 </div>
-                <select name="" id="select-blend" class="size_input-select">
-                    <option class="option-blend" value="normal">Ninguno</option>
-                    <option class="option-blend" value="lighten">Aclarar</option>
-                    <option class="option-blend" value="darken">Oscurecer</option>
-                    <option class="option-blend" value="difference">Diferencia</option>
-                    <option class="option-blend" value="luminosity">Luminosidad</option>
-                    <option class="option-blend" value="multiply">Multiplicar</option>
+                <div class="slidecontainer">
+                    <label for="">BRILLO</label>
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                    <label for="">OPACIDAD</label>
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                    <label for="">CONTRASTE</label>
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                    <label for="">DESENFOQUE</label>
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                    <label for="">ESCALA DE GRISES</label>
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                    <label for="">SEPIA</label>
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                    <label for="">HUE</label>
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                    <label for="">SATURADO</label>
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                    <label for="">NEGATIVO</label>
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                </div>
+                <button type="reset" class="reset">Reestablecer filtros</button>
+            </form>
+        </section>
+        <section id="aside-text" class="aside-text hidden">
+            <h3 class="title-aside">TEXTO</h3>
+            <form class="form-text">
+                <label for="">SUPERIOR</label>
+                <input type="text"
+                placeholder="TOP TEXT" class="margin-top-bottom height-30 padding-7">
+                <label><input type="checkbox" /> Sin texto superior</label>
+                <label for="" class="margin-top-bottom">INFERIOR</label>
+                <input type="text"
+                placeholder="BOTTOM TEXT"
+                class="margin-top-bottom height-30 padding-7">
+                <label><input type="checkbox" /> Sin texto inferior</label>
+                <label for="" class="margin-top-bottom">FUENTE</label>
+                <select name="" id="" value="Impact" class="margin-top-bottom height-30 padding-7">
+                    <option value="">Arial</option>
+                    <option value="">Arial black</option>
+                    <option value="">American Typewriter</option>
+                    <option value="">Andale Mono</option>
+                    <option value="">Comic Sans MS</option>
+                    <option value="">Helvetica</option>
+                    <option value="">Impact</option>
+                    <option value="">Verdana</option>
+                    <option value="">Times New Roman</option>
                 </select>
-            </div>
-            <div class="slidecontainer">
-                <label for="">BRILLO</label>
-                <input type="range" min="1" max="100" value="50" class="slider">
-                <label for="">OPACIDAD</label>
-                <input type="range" min="1" max="100" value="50" class="slider">
-                <label for="">CONTRASTE</label>
-                <input type="range" min="1" max="100" value="50" class="slider">
-                <label for="">DESENFOQUE</label>
-                <input type="range" min="1" max="100" value="50" class="slider">
-                <label for="">ESCALA DE GRISES</label>
-                <input type="range" min="1" max="100" value="50" class="slider">
-                <label for="">SEPIA</label>
-                <input type="range" min="1" max="100" value="50" class="slider">
-                <label for="">HUE</label>
-                <input type="range" min="1" max="100" value="50" class="slider">
-                <label for="">SATURADO</label>
-                <input type="range" min="1" max="100" value="50" class="slider">
-                <label for="">NEGATIVO</label>
-                <input type="range" min="1" max="100" value="50" class="slider">
-            </div>
-            <button type="reset" class="reset">Reestablecer filtros</button>
-        </form>
-    </aside>
-    <aside id="aside-text" class="aside-text hidden">
-        <h3 class="title-aside">TEXTO</h3>
-        <form class="form-text">
-            <label for="">SUPERIOR</label>
-            <input type="text"
-            placeholder="TOP TEXT" class="margin-top-bottom height-30 padding-7">
-            <label><input type="checkbox" /> Sin texto superior</label>
-            <label for="" class="margin-top-bottom">INFERIOR</label>
-            <input type="text"
-            placeholder="BOTTOM TEXT"
-            class="margin-top-bottom height-30 padding-7">
-            <label><input type="checkbox" /> Sin texto inferior</label>
-            <label for="" class="margin-top-bottom">FUENTE</label>
-            <select name="" id="" value="Impact" class="margin-top-bottom height-30 padding-7">
-                <option value="">Arial</option>
-                <option value="">Arial black</option>
-                <option value="">American Typewriter</option>
-                <option value="">Andale Mono</option>
-                <option value="">Comic Sans MS</option>
-                <option value="">Helvetica</option>
-                <option value="">Impact</option>
-                <option value="">Verdana</option>
-                <option value="">Times New Roman</option>
-            </select>
-            <div class="margin-top-bottom flex">
-                <input type="number" name="" id="" value="40" min="12" max="" class="height-30 grow-3 padding-7">
-                <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-left"></i></button>
-                <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-center"></i></button>
-                <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-right"></i></button>
-            </div>
-            <div class="margin-top-bottom row">
-                <div class="column size_input-select_text"> 
-                    <label for="" >COLOR</label>
-                    <input type="color" class="input_color_for_text">
+                <div class="margin-top-bottom flex">
+                    <input type="number" name="" id="" value="40" min="12" max="" class="height-30 grow-3 padding-7">
+                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-left"></i></button>
+                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-center"></i></button>
+                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-right"></i></button>
                 </div>
-                <div class="column size_input-select_text">
-                    <label for="">FONDO</label>
-                    <input type="color" class="input_color_for_text height-30">
+                <div class="margin-top-bottom row">
+                    <div class="column size_input-select_text"> 
+                        <label for="" >COLOR</label>
+                        <input type="color" class="input_color_for_text">
+                    </div>
+                    <div class="column size_input-select_text">
+                        <label for="">FONDO</label>
+                        <input type="color" class="input_color_for_text height-30">
+                    </div>
                 </div>
-            </div>
-            <label><input type="checkbox" class="margin-top-bottom"/> Fondo transparente</label>
-            <label for="">CONTORNO</label>
-            <div class="margin-top-bottom flex">
-                <button class="height-30 grow-1">Ninguno</button>
-                <button class="height-30 grow-1 margin-sides">Claro</button>
-                <button class="height-30 grow-1">Oscuro</button>
-            </div>
-            <label for="">ESPACIADO</label>
-            <input type="number" name="" id="" value="35" min="10" max="50" class="margin-top-bottom height-30 padding-7">
-            <label for="">INTERLINEADO</label>
-            <select name="" id="" class="margin-top-bottom height-30 padding-7">
-                <option value="">0.8</option>
-                <option value="">1</option>
-                <option value="">1.2</option>
-                <option value="">1.5</option>
-                <option value="">2</option>
-                <option value="">2.5</option>
-            </select>
-            
-        </form>
+                <label><input type="checkbox" class="margin-top-bottom"/> Fondo transparente</label>
+                <label for="">CONTORNO</label>
+                <div class="margin-top-bottom flex">
+                    <button class="height-30 grow-1">Ninguno</button>
+                    <button class="height-30 grow-1 margin-sides">Claro</button>
+                    <button class="height-30 grow-1">Oscuro</button>
+                </div>
+                <label for="">ESPACIADO</label>
+                <input type="number" name="" id="" value="35" min="10" max="50" class="margin-top-bottom height-30 padding-7">
+                <label for="">INTERLINEADO</label>
+                <select name="" id="" class="margin-top-bottom height-30 padding-7">
+                    <option value="">0.8</option>
+                    <option value="">1</option>
+                    <option value="">1.2</option>
+                    <option value="">1.5</option>
+                    <option value="">2</option>
+                    <option value="">2.5</option>
+                </select>
+            </form>
+        </section>
     </aside>
-
     <script src="script.js"></script>
 </body>
 </html>
