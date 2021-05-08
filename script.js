@@ -51,6 +51,36 @@ const asideCallText=()=>{
 }
 buttonTextAside.addEventListener('click', asideCallText);
 
+//-----------------------SLIDERS IMAGE---------------------------
+const brightness= document.querySelector('#brightness-slider');
+const opacity= document.querySelector('#opacity-slider');
+const contrast= document.querySelector('#contrast-slider');
+const blur= document.querySelector('#blur-slider');
+const grayscale= document.querySelector('#grayscale-slider');
+const sepia= document.querySelector('#sepia-slider');
+const huerotation= document.querySelector('#hue-rotation-slider');
+const saturation= document.querySelector('#saturation-slider');
+const invert= document.querySelector('#invert-slider')
+
+const applyFilter=()=>{
+    memeImg.style.filter=`brightness(${brightness.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${grayscale.value}%) sepia(${sepia.value}) hue-rotate(${huerotation.value}deg) saturate(${saturation.value}%) invert(${invert.value}%)` 
+}
+
+brightness.addEventListener('change', applyFilter);
+opacity.addEventListener('change', applyFilter);
+contrast.addEventListener('change', applyFilter);
+blur.addEventListener('change', applyFilter);
+grayscale.addEventListener('change', applyFilter);
+sepia.addEventListener('change', applyFilter);
+huerotation.addEventListener('change', applyFilter);
+saturation.addEventListener('change', applyFilter);
+invert.addEventListener('change', applyFilter);
+
+
+
+
+
+
 
 
 
