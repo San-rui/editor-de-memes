@@ -6,7 +6,7 @@ let colorPicked= document.querySelector('#colorPicked');
 //Seteado de imagen: la url de la imagen ingresada se agrega a la etiqueta img
 
 function getUrlImage(){
-    let srcMeme = imgInput.value
+    let srcMeme = imgInput.value;
     const memeImg = document.querySelector('#img');
     memeImg.style.backgroundImage = `url("${srcMeme}")`;
 }
@@ -80,7 +80,7 @@ invert.addEventListener('change', applyFilter);
 const buttonReset= document.querySelector('#button-reset');
 
 const cleanFilters=()=>{
-    meme2Img.style.filter=`none`; 
+    memeImg.style.filter=`none`; 
 }
 
 buttonReset.addEventListener('click', cleanFilters);
