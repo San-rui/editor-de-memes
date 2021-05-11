@@ -21,12 +21,10 @@
             </nav>
     </header>
     <main>
-        <div class="meme-generator">
-            <p></p>
-            <div class="overflow image-box-style">
-                <div src="" alt="" aria-label="Imagen de meme" id="img"></div>
-            </div>
-            <p></p>
+        <div class="meme-generator overflow">
+            <p id="p-text-sup" class="style-text">222222</p>
+            <div src="" alt="" aria-label="Imagen de meme" id="img"></div>
+            <p id="p-text-inf" class="style-text">22222222</p>
         </div>
         <button type="button"><i class="fas fa-download"></i>Descargar meme</button>
     </main>
@@ -101,12 +99,14 @@
                 <label for="">SUPERIOR</label>
                 <input type="text"
                 placeholder="TOP TEXT" class="margin-top-bottom height-30 padding-7">
-                <label><input type="checkbox" /> Sin texto superior</label>
+                <label>
+                    <input type="checkbox" id="check-text-sup" class="check-button"/> Sin texto superior</label>
                 <label for="" class="margin-top-bottom">INFERIOR</label>
                 <input type="text"
                 placeholder="BOTTOM TEXT"
                 class="margin-top-bottom height-30 padding-7">
-                <label><input type="checkbox" /> Sin texto inferior</label>
+                <label>
+                    <input type="checkbox" id="check-text-inf" class="check-button"/> Sin texto inferior</label>
                 <label for="" class="margin-top-bottom">FUENTE</label>
                 <select name="" id="" value="Impact" class="margin-top-bottom height-30 padding-7">
                     <option value="">Arial</option>

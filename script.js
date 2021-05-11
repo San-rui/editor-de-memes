@@ -3,7 +3,7 @@ const memeImg = document.querySelector('#img');
 let imgInput= document.getElementById('image-input')
 let colorPicked= document.querySelector('#colorPicked');
 
-//Seteado de imagen: la url de la imagen ingresada se agrega a la etiqueta img
+//----------SETEADO DE IMAGEN: la url de la imagen ingresada se agrega a la etiqueta img---------
 
 function getUrlImage(){
     let srcMeme = imgInput.value;
@@ -13,7 +13,7 @@ function getUrlImage(){
 
 imgInput.addEventListener('change', getUrlImage);
 
-//seteado de color de imagen: con un color picker se cambia el color de la imagen
+//----------SETEADO DE COLOR DE IMAGEN: con un color picker se cambia el color de la imagen---------
 
 const changeBackgroundImage=()=>{
     const meme2Img = document.querySelector('#img');
@@ -84,4 +84,37 @@ const cleanFilters=()=>{
 }
 
 buttonReset.addEventListener('click', cleanFilters);
+
+
+//--------------------ASIDE TEXTO--------------
+//----------CHECKBOX TEXTO SUPERIOR E INFERIOR--------------
+const checkTextSup= document.querySelector('#check-text-sup');
+const pTextSup= document.querySelector('#p-text-sup');
+const checkTextInf= document.querySelector('#check-text-inf');
+const pTextInf= document.querySelector('#p-text-inf');
+
+function hideTextSuperior() {
+    if (checkTextSup.checked) {
+        pTextSup.style.display='none';
+        memeImg.style.backgroundSize="150%"
+    }
+    else {
+        pTextSup.style.display='flex';
+        memeImg.style.backgroundSize="100%"
+    }
+}
+checkTextSup.addEventListener('click', hideTextSuperior);
+
+function hideTextInferior() {
+    if (checkTextInf.checked) {
+        pTextInf.style.display='none';
+        memeImg.style.backgroundSize="150%"
+        
+    }
+    else {
+        pTextInf.style.display='flex';     
+        memeImg.style.backgroundSize="100%"   
+    }
+}
+checkTextInf.addEventListener('click', hideTextInferior);
 
