@@ -133,5 +133,24 @@ const fillTextBottom=()=>{
 }
 inputTextBottom.addEventListener('keydown', fillTextBottom);
 
+//----------------TAMAÑO DE FUENTE-----------------------
+const inputFontSize= document.querySelector('#input-font-size');
 
+const changeFontSize=()=>{
+    const inputFontSizeValue=inputFontSize.value;
+    pTextTop.style.fontSize=`${(inputFontSizeValue)}px`;
+    pTextBottom.style.fontSize=`${(inputFontSizeValue)}px`;
+
+}
+inputFontSize.addEventListener('click', changeFontSize);
+
+//--------------------ESPACIADO-----------------------
+const inputSpacing= document.querySelector('#input-spacing');
+
+const changeSpacing=()=>{
+    const inputSpacingValue= inputSpacing.value;
+    pTextTop.style.padding=`${(inputSpacingValue)}px`;
+    pTextBottom.style.padding=`${(inputSpacingValue)}px`;
+}
+inputSpacing.addEventListener('click', changeSpacing);
 
