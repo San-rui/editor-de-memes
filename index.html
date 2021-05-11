@@ -22,9 +22,9 @@
     </header>
     <main>
         <div class="meme-generator overflow">
-            <p id="p-text-sup" class="style-text">222222</p>
+            <p id="p-text-top" class="style-text">TOP TEXT</p>
             <div src="" alt="" aria-label="Imagen de meme" id="img"></div>
-            <p id="p-text-inf" class="style-text">22222222</p>
+            <p id="p-text-bottom" class="style-text">BOTTOM TEXT</p>
         </div>
         <button type="button"><i class="fas fa-download"></i>Descargar meme</button>
     </main>
@@ -98,15 +98,15 @@
             <form class="form-text">
                 <label for="">SUPERIOR</label>
                 <input type="text"
-                placeholder="TOP TEXT" class="margin-top-bottom height-30 padding-7">
+                placeholder="TOP TEXT" class="margin-top-bottom height-30 padding-7" id="input-text-top">
                 <label>
-                    <input type="checkbox" id="check-text-sup" class="check-button"/> Sin texto superior</label>
+                    <input type="checkbox" id="check-text-top" class="check-button"/> Sin texto superior</label>
                 <label for="" class="margin-top-bottom">INFERIOR</label>
                 <input type="text"
                 placeholder="BOTTOM TEXT"
-                class="margin-top-bottom height-30 padding-7">
+                class="margin-top-bottom height-30 padding-7" id="input-text-bottom">
                 <label>
-                    <input type="checkbox" id="check-text-inf" class="check-button"/> Sin texto inferior</label>
+                    <input type="checkbox" id="check-text-bottom" class="check-button"/> Sin texto inferior</label>
                 <label for="" class="margin-top-bottom">FUENTE</label>
                 <select name="" id="" value="Impact" class="margin-top-bottom height-30 padding-7">
                     <option value="">Arial</option>

@@ -88,33 +88,50 @@ buttonReset.addEventListener('click', cleanFilters);
 
 //--------------------ASIDE TEXTO--------------
 //----------CHECKBOX TEXTO SUPERIOR E INFERIOR--------------
-const checkTextSup= document.querySelector('#check-text-sup');
-const pTextSup= document.querySelector('#p-text-sup');
-const checkTextInf= document.querySelector('#check-text-inf');
-const pTextInf= document.querySelector('#p-text-inf');
+const checkTextTop= document.querySelector('#check-text-top');
+const pTextTop= document.querySelector('#p-text-top');
+const checkTextBottom= document.querySelector('#check-text-bottom');
+const pTextBottom= document.querySelector('#p-text-bottom');
 
-function hideTextSuperior() {
-    if (checkTextSup.checked) {
-        pTextSup.style.display='none';
+function hideTextTop() {
+    if (checkTextTop.checked) {
+        pTextTop.style.display='none';
         memeImg.style.backgroundSize="150%"
     }
     else {
-        pTextSup.style.display='flex';
+        pTextTop.style.display='flex';
         memeImg.style.backgroundSize="100%"
     }
 }
-checkTextSup.addEventListener('click', hideTextSuperior);
+checkTextTop.addEventListener('click', hideTextTop);
 
-function hideTextInferior() {
-    if (checkTextInf.checked) {
-        pTextInf.style.display='none';
+function hideTextBottom() {
+    if (checkTextBottom.checked) {
+        pTextBottom.style.display='none';
         memeImg.style.backgroundSize="150%"
         
     }
     else {
-        pTextInf.style.display='flex';     
+        pTextBottom.style.display='flex';     
         memeImg.style.backgroundSize="100%"   
     }
 }
-checkTextInf.addEventListener('click', hideTextInferior);
+checkTextBottom.addEventListener('click', hideTextBottom);
+//-----------------FUNCIONAMIENTO DE AGREGADO DE TEXTOS----------
+const inputTextTop= document.querySelector('#input-text-top');
+const inputTextBottom= document.querySelector('#input-text-bottom');
+
+const fillTextTop=()=>{
+    const inputTextTopValue= inputTextTop.value;
+    pTextTop.innerHTML=inputTextTopValue;
+}
+inputTextTop.addEventListener('keydown', fillTextTop);
+
+const fillTextBottom=()=>{
+    const inputTextBottomValue= inputTextBottom.value;
+    pTextBottom.innerHTML=inputTextBottomValue;
+}
+inputTextBottom.addEventListener('keydown', fillTextBottom);
+
+
 
