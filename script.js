@@ -76,11 +76,12 @@ huerotation.addEventListener('change', applyFilter);
 saturation.addEventListener('change', applyFilter);
 invert.addEventListener('change', applyFilter);
 
+//----------BOTON REESTABLECER FILTROS--------------
+const buttonReset= document.querySelector('#button-reset');
 
+const cleanFilters=()=>{
+    meme2Img.style.filter=`none`; 
+}
 
-
-
-
-
-
+buttonReset.addEventListener('click', cleanFilters);
 
