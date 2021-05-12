@@ -99,6 +99,7 @@ i{
     width: 37rem;
     height:37rem;
     margin:50px 0px;
+    position: relative;
 }
 .form-text{
     display: flex;

@@ -154,3 +154,22 @@ const changeSpacing=()=>{
 }
 inputSpacing.addEventListener('click', changeSpacing);
 
+
+//------------------CHECKBOX FONDO TRANSPARENTE --------------------------------
+const checkboxTransparentBg= document.querySelector('#checkbox_transparent-bg')
+
+function bgTextTransparent() {
+    if (checkboxTransparentBg.checked) {
+        pTextTop.style= "position: absolute; top: 0; background-color: transparent";
+        pTextBottom.style= "position: absolute; bottom: 0; background-color: transparent";
+    }
+    else {
+        pTextTop.style= "position: static; background-color: white";
+        pTextBottom.style= "position: static; background-color: white";
+    }
+}
+checkboxTransparentBg.addEventListener('click', bgTextTransparent);
+
+//-------- No me convence mucho como quedó montado el botón de transparent (lola) --------------------
+
+
