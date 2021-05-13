@@ -117,7 +117,9 @@ function hideTextBottom() {
     }
 }
 checkTextBottom.addEventListener('click', hideTextBottom);
+
 //-----------------FUNCIONAMIENTO DE AGREGADO DE TEXTOS----------
+
 const inputTextTop= document.querySelector('#input-text-top');
 const inputTextBottom= document.querySelector('#input-text-bottom');
 
@@ -172,4 +174,40 @@ checkboxTransparentBg.addEventListener('click', bgTextTransparent);
 
 //-------- No me convence mucho como quedó montado el botón de transparent (lola) --------------------
 
+const selectLineHeight = document.getElementById("select_line-height");
 
+
+const applyLineHeight = (event) => {
+    event.preventDefault();
+    const lineHeightValue = event.target.value;
+    switch (lineHeightValue) {
+        case "opt08":
+            pTextTop.style.lineHeight = "0.8"
+            pTextBottom.style.lineHeight= "0.8"
+        break;
+        case "opt1":
+            pTextTop.style.lineHeight = "1"
+            pTextBottom.style.lineHeight= "1"
+        break;
+        case "opt12":
+            pTextTop.style.lineHeight = "1.2"
+            pTextBottom.style.lineHeight= "1.2"
+        break;
+        case "opt15":
+            pTextTop.style.lineHeight = "1.5"
+            pTextBottom.style.lineHeight= "1.5"
+        break;
+        case "opt2":
+            pTextTop.style.lineHeight = "2"
+            pTextBottom.style.lineHeight= "2"
+        break;
+        case "opt25":
+        pTextTop.style.lineHeight = "2.5"
+        pTextBottom.style.lineHeight= "2.5"
+        break;    
+    }
+};
+
+selectLineHeight.addEventListener('click',applyLineHeight )
+
+//-------------que bonito hacer el switch
