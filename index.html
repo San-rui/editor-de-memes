@@ -38,7 +38,7 @@
                 <div class="container-background">
                     <div class="container-color size_input-select">
                         <input type="color" class="size_input-select input-color-style" id="colorPicked">
-                        <label for="">#FFFFFF</label>
+                        <p id="hexadecimal">#FFFFFF</p>
                     </div>
                     <select name="" id="select-blend" class="size_input-select">
                         <option class="option-blend" value="normal">Ninguno</option>
@@ -121,26 +121,32 @@
                 </select>
                 <div class="margin-top-bottom flex">
                     <input type="number" name="" id="input-font-size" value="40" min="12" max="" class="height-30 grow-3 padding-7">
-                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-left"></i></button>
-                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-center"></i></button>
-                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-right"></i></button>
+                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-left" type="button"></i></button>
+                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-center" type="button"></i></button>
+                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-right" type="button"></i></button>
                 </div>
                 <div class="margin-top-bottom row">
-                    <div class="column size_input-select_text"> 
+                    <div class="column"> 
                         <label for="" >COLOR</label>
-                        <input type="color" class="input_color_for_text">
+                        <div class="row">
+                            <input type="color" class="input_color_for_text" id="color-picked-text">
+                            <p id="hexadecimal-color-text">#FFFFFF</p>
+                        </div>
                     </div>
-                    <div class="column size_input-select_text">
+                    <div class="column">
                         <label for="">FONDO</label>
-                        <input type="color" class="input_color_for_text height-30">
+                        <div class="row">
+                            <input type="color" class="input_color_for_text height-30" id="background-color-picked-text">
+                            <p id="hexadecimal-background-color-text">#FFFFFF</p>
+                        </div>
                     </div>
                 </div>
-                <label ><input type="checkbox" class="margin-top-bottom" id="checkbox_transparent-bg"/> Fondo transparente</label>
+                <label><input type="checkbox" class="margin-top-bottom" id="checkbox_transparent-bg"/> Fondo transparente</label>
                 <label for="">CONTORNO</label>
                 <div class="margin-top-bottom flex">
-                    <button class="height-30 grow-1">Ninguno</button>
-                    <button class="height-30 grow-1 margin-sides">Claro</button>
-                    <button class="height-30 grow-1">Oscuro</button>
+                    <button class="height-30 grow-1 shadow-text" value="none" type="button" >Ninguno</button>
+                    <button class="height-30 grow-1 margin-sides shadow-text" value="white" type="button">Claro</button>
+                    <button class="height-30 grow-1 shadow-text" value="black" type="button">Oscuro</button>
                 </div>
                 <label for="">ESPACIADO</label>
                 <input type="number" name="" id="input-spacing" value="35" min="10" max="50" class="margin-top-bottom height-30 padding-7">

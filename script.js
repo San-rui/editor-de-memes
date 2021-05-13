@@ -1,10 +1,9 @@
-//Declarado de variables
+//------------DECLARADO DE VARIABLES------------------
 const memeImg = document.querySelector('#img');
 let imgInput= document.getElementById('image-input')
 let colorPicked= document.querySelector('#colorPicked');
 
 //----------SETEADO DE IMAGEN: la url de la imagen ingresada se agrega a la etiqueta img---------
-
 function getUrlImage(){
     let srcMeme = imgInput.value;
     const memeImg = document.querySelector('#img');
@@ -14,15 +13,17 @@ function getUrlImage(){
 imgInput.addEventListener('change', getUrlImage);
 
 //----------SETEADO DE COLOR DE IMAGEN: con un color picker se cambia el color de la imagen---------
-
 const changeBackgroundImage=()=>{
     const meme2Img = document.querySelector('#img');
     meme2Img.style.backgroundColor = colorPicked.value;
+
+    const hexadecimal= document.querySelector('#hexadecimal');
+    hexadecimal.innerHTML=colorPicked.value.toUpperCase();
+
 }
 colorPicked.addEventListener('input', changeBackgroundImage);
 
 //----------SETEADO DEL SELECT DE  COLOR BLEND--------------
-
 const selectBlend= document.querySelector('#select-blend');
 
 const changeBlendMode=()=>{
@@ -33,7 +34,6 @@ const changeBlendMode=()=>{
 selectBlend.addEventListener('input', changeBlendMode);
 
 //-------------BOTONES DE PANEL PRINCIPAL-------------------
-
 const buttonImageAside= document.querySelector('#button-image-aside'); 
 const buttonTextAside= document.querySelector('#button-text-aside');
 const asideImg= document.querySelector('#aside-img');
@@ -82,9 +82,7 @@ const buttonReset= document.querySelector('#button-reset');
 const cleanFilters=()=>{
     memeImg.style.filter=`none`; 
 }
-
 buttonReset.addEventListener('click', cleanFilters);
-
 
 //--------------------ASIDE TEXTO--------------
 //----------CHECKBOX TEXTO SUPERIOR E INFERIOR--------------
@@ -127,13 +125,13 @@ const fillTextTop=()=>{
     const inputTextTopValue= inputTextTop.value;
     pTextTop.innerHTML=inputTextTopValue;
 }
-inputTextTop.addEventListener('keydown', fillTextTop);
+inputTextTop.addEventListener('keyup', fillTextTop);
 
 const fillTextBottom=()=>{
     const inputTextBottomValue= inputTextBottom.value;
     pTextBottom.innerHTML=inputTextBottomValue;
 }
-inputTextBottom.addEventListener('keydown', fillTextBottom);
+inputTextBottom.addEventListener('keyup', fillTextBottom);
 
 //----------------TAMAÑO DE FUENTE-----------------------
 const inputFontSize= document.querySelector('#input-font-size');
@@ -142,7 +140,6 @@ const changeFontSize=()=>{
     const inputFontSizeValue=inputFontSize.value;
     pTextTop.style.fontSize=`${(inputFontSizeValue)}px`;
     pTextBottom.style.fontSize=`${(inputFontSizeValue)}px`;
-
 }
 inputFontSize.addEventListener('click', changeFontSize);
 
@@ -211,3 +208,68 @@ const applyLineHeight = (event) => {
 selectLineHeight.addEventListener('click',applyLineHeight )
 
 //-------------que bonito hacer el switch
+//------------------COLOR TEXTO MEME----------------
+let colorPickedText= document.querySelector('#color-picked-text');
+
+const changeColorText=()=>{
+    
+    pTextTop.style.color = colorPickedText.value;
+    pTextBottom.style.color= colorPickedText.value;
+
+    const hexadecimalColorText= document.querySelector('#hexadecimal-color-text');
+    hexadecimalColorText.innerHTML=colorPickedText.value.toUpperCase();
+}
+colorPickedText.addEventListener('input', changeColorText);
+
+//------------------BACKGROUND-COLOR TEXTO MEME----------------
+let backgroundColorPickedText= document.querySelector('#background-color-picked-text');
+
+const changeBackgroundColorText=()=>{
+    pTextTop.style.backgroundColor = backgroundColorPickedText.value;
+    pTextBottom.style.backgroundColor= backgroundColorPickedText.value;
+
+    const hexadecimalBackgroundColorText= document.querySelector('#hexadecimal-background-color-text');
+    hexadecimalBackgroundColorText.innerHTML=backgroundColorPickedText.value.toUpperCase();
+}
+backgroundColorPickedText.addEventListener('input', changeBackgroundColorText);
+
+//------------------BOTONES DE CONTORNO----------------
+//const shadowTextNone= document.querySelector('#shadow-text-none');
+//const shadowTextWhite= document.querySelector('#shadow-text-white');
+//const shadowTextBlack= document.querySelector('#shadow-text-black');
+// const shadowText=document.getElementsByClassName('shadow-text');
+
+// for(let i=0; shadowText.length<i; i++){
+
+//     if(shadowText[i].value=="none"){
+//         pTextTop.style.textShadow= "5px 5px 1px #ff0000";
+//     }
+//     console.log(shadowText[i].value)
+//     shadowText[i].addEventListener('click', applyShadowText)
+// }
+//------------------CAMBIO DE FUENTE----------------
+
+
+const changefont =(event)=>{
+    event.preventDefault();
+
+    const selectFont= event.target.selectFont.value;
+
+    switch (selectFont) {
+        case "Arial":
+            pTextTop.style=`font-family: Arial`;
+        break;
+
+        default:
+
+    } 
+
+    
+
+}
+
+
+
+
+
+
