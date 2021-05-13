@@ -195,19 +195,37 @@ backgroundColorPickedText.addEventListener('input', changeBackgroundColorText);
 //const shadowTextNone= document.querySelector('#shadow-text-none');
 //const shadowTextWhite= document.querySelector('#shadow-text-white');
 //const shadowTextBlack= document.querySelector('#shadow-text-black');
-const shadowText=document.getElementsByClassName('shadow-text');
+// const shadowText=document.getElementsByClassName('shadow-text');
 
-for(let i=0; shadowText.length<i; i++){
+// for(let i=0; shadowText.length<i; i++){
 
-    const applyShadowText=()=>{
-        if(shadowText[i].value=="none"){
-            pTextTop.style.textShadow= "5px 5px 1px #ff0000";
-        }
-        console.log(shadowText[i].value)
+//     if(shadowText[i].value=="none"){
+//         pTextTop.style.textShadow= "5px 5px 1px #ff0000";
+//     }
+//     console.log(shadowText[i].value)
+//     shadowText[i].addEventListener('click', applyShadowText)
+// }
+//------------------CAMBIO DE FUENTE----------------
 
-    }
-    shadowText[i].addEventListener('click', applyShadowText)
+
+const changefont =(event)=>{
+    event.preventDefault();
+
+    const selectFont= event.target.selectFont.value;
+
+    switch (selectFont) {
+        case "Arial":
+            pTextTop.style=`font-family: Arial`;
+        break;
+
+        default:
+
+    } 
+
+    
+
 }
+
 
 
 
