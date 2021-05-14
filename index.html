@@ -108,22 +108,22 @@
                 <label>
                     <input type="checkbox" id="check-text-bottom" class="check-button"/> Sin texto inferior</label>
                 <label for="" class="margin-top-bottom">FUENTE</label>
-                <select name="" id="font-select" value="Impact" class="margin-top-bottom height-30 padding-7">
-                    <option value="arial">Arial</option>
-                    <option value="arialblack">Arial black</option>
-                    <option value="americantype">American Typewriter</option>
-                    <option value="andale">Andale Mono</option>
-                    <option value="comicsans">Comic Sans MS</option>
-                    <option value="helvetica">Helvetica</option>
-                    <option value="impact">Impact</option>
-                    <option value="verdana">Verdana</option>
-                    <option value="timesnew">Times New Roman</option>
+                <select name="" id="select-font" value="Impact" class="margin-top-bottom height-30 padding-7">
+                    <option value="Arial">Arial</option>
+                    <option value="Arialblack">Arial black</option>
+                    <option value="AmericanTypewriter">American Typewriter</option>
+                    <option value="AndaleMono">Andale Mono</option>
+                    <option value="ComicSansMS">Comic Sans MS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact" selected ="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="TimesNewRoman">Times New Roman</option>
                 </select>
                 <div class="margin-top-bottom flex">
                     <input type="number" name="" id="input-font-size" value="40" min="12" max="" class="height-30 grow-3 padding-7">
-                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-left" type="button"></i></button>
-                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-center" type="button"></i></button>
-                    <button class="height-30 grow-1 format-button-justify"><i class="fas fa-align-right" type="button"></i></button>
+                    <button type="button" class="grow-1 format-button-justify" id="text-align-left"><i class="fas fa-align-left"></i></button>
+                    <button type="button" class="grow-1 format-button-justify" id="text-align-center"><i class="fas fa-align-center"></i></button>
+                    <button type="button" class="grow-1 format-button-justify" id="text-align-right"><i class="fas fa-align-right"></i></button>
                 </div>
                 <div class="margin-top-bottom row">
                     <div class="column"> 
@@ -144,9 +144,9 @@
                 <label><input type="checkbox" class="margin-top-bottom" id="checkbox_transparent-bg"/> Fondo transparente</label>
                 <label for="">CONTORNO</label>
                 <div class="margin-top-bottom flex">
-                    <button class="height-30 grow-1 shadow-text" value="none" type="button" >Ninguno</button>
-                    <button class="height-30 grow-1 margin-sides shadow-text" value="white" type="button">Claro</button>
-                    <button class="height-30 grow-1 shadow-text" value="black" type="button">Oscuro</button>
+                    <button type="button" class="height-30 grow-1" value="none" id="shadow-text-none">Ninguno</button>
+                    <button type="button" class="height-30 grow-1 margin-sides" value="white"id="shadow-text-white">Claro</button>
+                    <button type="button" class="height-30 grow-1" value="black" id="shadow-text-black">Oscuro</button>
                 </div>
                 <label for="">ESPACIADO</label>
                 <input type="number" name="" id="input-spacing" value="35" min="10" max="50" class="margin-top-bottom height-30 padding-7">

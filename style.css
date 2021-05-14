@@ -1,3 +1,6 @@
+/*@font-face { font-family: Atkinson Hiperlegible;
+src:url(/web-fonts/TTF/Atkinson-Hyperlegible-Regular-102.ttf);
+};*/
 *{
     margin: 0;
     padding: 0;
@@ -8,13 +11,13 @@ body{
     flex-direction: column;
     position: relative;
     background-color:rgb(180, 207, 148);
+    font-family: Arial, Helvetica, sans-serif;
 }
 main{
     width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 header{
     width:100%;
@@ -25,9 +28,7 @@ header{
     align-items: center;
     flex-direction: column;
 }
-i{
-    margin-right: 7px;
-}
+
 /* ----ASIDE TEXTO STYLE  */
 .aside-text{
     width:20%;
@@ -45,20 +46,22 @@ i{
     margin-bottom: 20px;
     text-align: center;
 }
-
 .form-text{
     display: flex;
     flex-direction: column;  
 }
-
 .input_color_for_text{
     width: 90%;
     height:30px;
 }
-
 .format-button-justify{
     margin-left: 7px;
     padding-left: 7px;
+    padding-right: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 /* ----ASIDE IMAGE STYLE  */
 .aside-img{
@@ -72,7 +75,6 @@ i{
     top:0px;
     right: 0px;
     
-
 }
 .hidden{
     display:none;
@@ -107,7 +109,6 @@ i{
     margin:25px 0;
 }
 /*----- CARD DEL MEME----*/
-
 .meme-generator{
     display: flex;
     justify-content: center;
@@ -119,13 +120,11 @@ i{
     margin:50px 0px;
     position: relative;
 }
-
 .image-box-style{
     width: 600px;
     height: 370px;
     background-color: black;
 }
-
 .container-color{
     background-color:white;
     display: flex;
@@ -133,7 +132,6 @@ i{
     justify-content: center;
     align-items: center;
 }
-
 #img {
     width:100%;
     height: 100%;
@@ -152,11 +150,10 @@ i{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 /*-------CLASES GENERALES --------*/
-
 .margin-top-bottom{
     margin: 7px 0px;
 }
@@ -166,77 +163,37 @@ i{
 }
 .row{
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content:space-between;
 }
 .size_input-select_text{
     width:45%;
 }
-
 .height-30{
     height: 30px;
 }
-
 .padding-7{
     padding-left: 7px;
 }
-
 .flex{
     display: flex;
 }
-
 .grow-1{
     flex-grow: 1;
 }
-
 .grow-3{
     flex-grow: 3;
 }
-
-
 .margin-sides{
     margin: 0px 7px;
 }
-
 .overflow{
     overflow: hidden;
 }
-
 input[type=color] {
     border: 1px;
     outline: none;
     border-radius: 100%;
     padding: 0;
     width: 20px;
-    height: 20px;
-}
-
-.container-color{
-    background-color:white;
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
-}
-input[type="color"]{
-    border-radius: 50%;
-}
-#img {
-    width:100%;
-    height: 100%;
-    background-color: black;
-    background-position:center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: fill;
-    display: flex;
-    flex-grow: 1;
-}
-.style-text{
-    width: 100%;
-    font-size: 40px;
-    padding:40px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    height: 20px;};

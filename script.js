@@ -169,7 +169,7 @@ function bgTextTransparent() {
 }
 checkboxTransparentBg.addEventListener('click', bgTextTransparent);
 
-//-------- No me convence mucho como quedó montado el botón de transparent (lola) --------------------
+//--------------------- INTERLENEADO --------------------
 
 const selectLineHeight = document.getElementById("select_line-height");
 
@@ -205,9 +205,8 @@ const applyLineHeight = (event) => {
     }
 };
 
-selectLineHeight.addEventListener('click',applyLineHeight )
+selectLineHeight.addEventListener('change',applyLineHeight );
 
-//-------------que bonito hacer el switch
 //------------------COLOR TEXTO MEME----------------
 let colorPickedText= document.querySelector('#color-picked-text');
 
@@ -233,43 +232,81 @@ const changeBackgroundColorText=()=>{
 }
 backgroundColorPickedText.addEventListener('input', changeBackgroundColorText);
 
-//------------------BOTONES DE CONTORNO----------------
-//const shadowTextNone= document.querySelector('#shadow-text-none');
-//const shadowTextWhite= document.querySelector('#shadow-text-white');
-//const shadowTextBlack= document.querySelector('#shadow-text-black');
-// const shadowText=document.getElementsByClassName('shadow-text');
-
-// for(let i=0; shadowText.length<i; i++){
-
-//     if(shadowText[i].value=="none"){
-//         pTextTop.style.textShadow= "5px 5px 1px #ff0000";
-//     }
-//     console.log(shadowText[i].value)
-//     shadowText[i].addEventListener('click', applyShadowText)
-// }
 //------------------CAMBIO DE FUENTE----------------
-
-
-const changefont =(event)=>{
-    event.preventDefault();
-
-    const selectFont= event.target.selectFont.value;
-
-    switch (selectFont) {
-        case "Arial":
-            pTextTop.style=`font-family: Arial`;
-        break;
-
-        default:
-
-    } 
-
-    
+const selectfont=document.querySelector('#select-font');
+const changeFont=()=>{
+    const selectFontValue=selectfont.value;
+    pTextTop.style.fontFamily=`${(selectFontValue)}`;
+    pTextBottom.style.fontFamily=`${(selectFontValue)}`;
 
 }
+selectfont.addEventListener('input', changeFont);
+
+//------------------ALINEACION----------------
+const textAlignLeft=document.querySelector('#text-align-left');
+const textAlignCenter=document.querySelector('#text-align-center');
+const textAlignRight=document.querySelector('#text-align-right');
+
+const changeAlignTextLeft=()=>{
+    pTextTop.style.justifyContent =`flex-start`;
+    pTextBottom.style.justifyContent=`flex-start`;
+
+}
+textAlignLeft.addEventListener('click', changeAlignTextLeft);
+
+const changeAlignTextCenter=()=>{
+    pTextTop.style.justifyContent =`center`;
+    pTextBottom.style.justifyContent=`center`;
+
+}
+textAlignCenter.addEventListener('click', changeAlignTextCenter);
 
 
+const changeAlignTextRight=()=>{
+    pTextTop.style.justifyContent =`flex-end`;
+    pTextBottom.style.justifyContent=`flex-end`;
 
+}
+textAlignRight.addEventListener('click', changeAlignTextRight);
+
+//------------------BOTONES DE CONTORNO----------------
+const buttonshadowTextNone= document.querySelector('#shadow-text-none');
+const buttonshadowTextWhite= document.querySelector('#shadow-text-white');
+const buttonshadowTextBlack= document.querySelector('#shadow-text-black');
+
+const noneShadowText=()=>{
+    pTextTop.style.textShadow= "none";
+    pTextBottom.style.textShadow= "none";
+
+}
+buttonshadowTextNone.addEventListener('click', noneShadowText);
+
+const whiteShadowText=()=>{
+    pTextTop.style.textShadow= "2px 2px 1px #FFFFFF ";
+    pTextBottom.style.textShadow= "2px 2px 1px #FFFFFF ";
+}
+buttonshadowTextWhite.addEventListener('click', whiteShadowText);
+
+
+const blackShadowText=()=>{
+    pTextTop.style.textShadow= "2px 2px 1px #000000";
+    pTextBottom.style.textShadow= "2px 2px 1px #000000";
+}
+buttonshadowTextBlack.addEventListener('click', blackShadowText);
+
+// const applyShadowText =(e)=>{
+//     if (shadowTextNone.value==="none"){
+//         pTextTop.style.textShadow= "2px 2px 1px #ff0000";
+//     }
+//     else if (shadowTextWhite.value==="white"){
+//         pTextTop.style.textShadow= "2px 2px 1px green";
+//     }
+    
+// };
+
+// for(let i = 0; i <shadowText.length; i++) {
+//     shadowText[i].addEventListener('click', applyShadowText);
+// }
 
 
 
