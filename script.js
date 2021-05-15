@@ -294,19 +294,21 @@ const blackShadowText=()=>{
 }
 buttonshadowTextBlack.addEventListener('click', blackShadowText);
 
-// const applyShadowText =(e)=>{
-//     if (shadowTextNone.value==="none"){
-//         pTextTop.style.textShadow= "2px 2px 1px #ff0000";
-//     }
-//     else if (shadowTextWhite.value==="white"){
-//         pTextTop.style.textShadow= "2px 2px 1px green";
-//     }
-    
-// };
+//---------------------MODO OSCURO---------------------
+const buttonMode= document.querySelector('#button-mode');
+const modeText= document.querySelector('#mode-text');
 
-// for(let i = 0; i <shadowText.length; i++) {
-//     shadowText[i].addEventListener('click', applyShadowText);
-// }
+const changeMode=()=>{
+    if(document.body.className=="dark-mode"){
+        document.body.className="light-mode";
+        modeText.innerText = 'Modo claro';
+    }
+    else{
+        document.body.className="dark-mode";
+        modeText.innerText = 'Modo oscuro';
+    }
+};
 
+buttonMode.addEventListener('click', changeMode);
 
 
