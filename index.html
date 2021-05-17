@@ -12,9 +12,9 @@
     <header>
             <h1>Generador de Memes</h1>
             <nav class="style-nav">
-                <button type="button" id="button-image-aside" class="style-button-nav"><i class="far fa-file-image"></i>Imagen</button>
-                <button type="button" id="button-text-aside" class="style-button-nav"><i class="fas fa-font"></i>Texto</button>
-                <button type="button" id="button-mode" class="style-button-nav"> <i class="far fa-lightbulb"></i>
+                <button type="button" id="button-image-aside" class="style-button-nav"><i class="far fa-file-image i-nav"></i>Imagen</button>
+                <button type="button" id="button-text-aside" class="style-button-nav"><i class="fas fa-font i-nav"></i>Texto</button>
+                <button type="button" id="button-mode" class="style-button-nav"> <i class="far fa-lightbulb i-nav"></i>
                     <span id="mode-text">Modo oscuro</span>
                 </button>
             </nav>
@@ -32,14 +32,14 @@
             <h3 class="title-aside">IMAGEN</h3>
             <form>
                 <label for="">URL</label>
-                <input type="text" class="url-input" id="image-input">
+                <input type="text" class="url-input hover" id="image-input">
                 <label for="">FONDO</label>
                 <div class="container-background">
                     <div class="container-color size_input-select">
-                        <input type="color" class="size_input-select input-color-style" id="colorPicked">
-                        <p id="hexadecimal">#FFFFFF</p>
+                        <input type="color" class="size_input-select input-color-style color-picker" id="colorPicked">
+                        <p id="hexadecimal" class="colorpicker-text-style">#FFFFFF</p>
                     </div>
-                    <select name="" id="select-blend" class="size_input-select">
+                    <select name="" id="select-blend" class="size_input-select hover">
                         <option class="option-blend" value="normal">Ninguno</option>
                         <option class="option-blend" value="lighten">Aclarar</option>
                         <option class="option-blend" value="darken">Oscurecer</option>
@@ -89,7 +89,7 @@
                         <input type="range" class="slide-input" id="invert-slider" min="0" max="100" value="0" step="0.1">
                     </div>
                 </div>
-                <button type="reset" class="reset" class="slide-input" id="button-reset">Reestablecer filtros</button>   
+                <button type="reset"  class="hover reset" id="button-reset">Reestablecer filtros</button>   
             </form>
         </section>
         <section id="aside-text" class="aside-text hidden">
@@ -97,17 +97,17 @@
             <form class="form-text">
                 <label for="">SUPERIOR</label>
                 <input type="text"
-                placeholder="TOP TEXT" class="margin-top-bottom height-30 padding-7" id="input-text-top">
+                placeholder="TOP TEXT" class="margin-top-bottom style-input padding-7 hover" id="input-text-top">
                 <label>
                     <input type="checkbox" id="check-text-top" class="check-button"/> Sin texto superior</label>
                 <label for="" class="margin-top-bottom">INFERIOR</label>
                 <input type="text"
                 placeholder="BOTTOM TEXT"
-                class="margin-top-bottom height-30 padding-7" id="input-text-bottom">
+                class="margin-top-bottom style-input padding-7 hover" id="input-text-bottom">
                 <label>
                     <input type="checkbox" id="check-text-bottom" class="check-button"/> Sin texto inferior</label>
                 <label for="" class="margin-top-bottom">FUENTE</label>
-                <select name="" id="select-font" value="Impact" class="margin-top-bottom height-30 padding-7">
+                <select name="" id="select-font" value="Impact" class="margin-top-bottom style-input padding-7 hover">
                     <option value="Arial">Arial</option>
                     <option value="Arialblack">Arial black</option>
                     <option value="AmericanTypewriter">American Typewriter</option>
@@ -119,23 +119,23 @@
                     <option value="TimesNewRoman">Times New Roman</option>
                 </select>
                 <div class="margin-top-bottom flex">
-                    <input type="number" name="" id="input-font-size" value="40" min="12" max="" class="height-30 grow-3 padding-7">
-                    <button type="button" class="grow-1 format-button-justify" id="text-align-left"><i class="fas fa-align-left"></i></button>
-                    <button type="button" class="grow-1 format-button-justify" id="text-align-center"><i class="fas fa-align-center"></i></button>
-                    <button type="button" class="grow-1 format-button-justify" id="text-align-right"><i class="fas fa-align-right"></i></button>
+                    <input type="number" name="" id="input-font-size" value="40" min="12" max="" class="style-input grow-3 padding-7 hover">
+                    <button type="button" class="grow-1 format-button-justify hover" id="text-align-left"><i class="fas fa-align-left"></i></button>
+                    <button type="button" class="grow-1 format-button-justify hover" id="text-align-center"><i class="fas fa-align-center"></i></button>
+                    <button type="button" class="grow-1 format-button-justify hover" id="text-align-right"><i class="fas fa-align-right"></i></button>
                 </div>
                 <div class="margin-top-bottom row">
                     <div class="column"> 
                         <label for="" >COLOR</label>
-                        <div class="row">
-                            <input type="color" class="input_color_for_text" id="color-picked-text">
+                        <div class="row container-color-picker-text">
+                            <input type="color" class="color-picker" id="color-picked-text">
                             <p id="hexadecimal-color-text">#FFFFFF</p>
                         </div>
                     </div>
                     <div class="column">
                         <label for="">FONDO</label>
-                        <div class="row">
-                            <input type="color" class="input_color_for_text height-30" id="background-color-picked-text">
+                        <div class="row container-color-picker-text">
+                            <input type="color" class="style-input color-picker" id="background-color-picked-text">
                             <p id="hexadecimal-background-color-text">#FFFFFF</p>
                         </div>
                     </div>
@@ -143,14 +143,14 @@
                 <label><input type="checkbox" class="margin-top-bottom" id="checkbox_transparent-bg"/> Fondo transparente</label>
                 <label for="">CONTORNO</label>
                 <div class="margin-top-bottom flex">
-                    <button type="button" class="height-30 grow-1" value="none" id="shadow-text-none">Ninguno</button>
-                    <button type="button" class="height-30 grow-1 margin-sides" value="white"id="shadow-text-white">Claro</button>
-                    <button type="button" class="height-30 grow-1" value="black" id="shadow-text-black">Oscuro</button>
+                    <button type="button" class="style-button-outline grow-1 hover" value="none" id="shadow-text-none">Ninguno</button>
+                    <button type="button" class="style-button-outline grow-1 margin-sides hover" value="white"id="shadow-text-white">Claro</button>
+                    <button type="button" class="style-button-outline grow-1 hover" value="black" id="shadow-text-black">Oscuro</button>
                 </div>
                 <label for="">ESPACIADO</label>
-                <input type="number" name="" id="input-spacing" value="35" min="10" max="50" class="margin-top-bottom height-30 padding-7">
+                <input type="number" name="" id="input-spacing" value="35" min="10" max="50" class="margin-top-bottom style-input padding-7">
                 <label for="">INTERLINEADO</label>
-                <select name="" id="select_line-height" class="margin-top-bottom height-30 padding-7">
+                <select name="" id="select_line-height" class="margin-top-bottom style-input padding-7 hover">
                     <option value="opt08">0.8</option>
                     <option value="opt1">1</option>
                     <option value="opt12">1.2</option>

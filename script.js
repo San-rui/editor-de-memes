@@ -3,6 +3,7 @@ const memeImg = document.querySelector('#img');
 let imgInput= document.getElementById('image-input')
 let colorPicked= document.querySelector('#colorPicked');
 
+//--------------------ASIDE IMAGEN------------------
 //----------SETEADO DE IMAGEN: la url de la imagen ingresada se agrega a la etiqueta img---------
 function getUrlImage(){
     let srcMeme = imgInput.value;
@@ -84,7 +85,7 @@ const cleanFilters=()=>{
 }
 buttonReset.addEventListener('click', cleanFilters);
 
-//--------------------ASIDE TEXTO--------------
+//--------------------ASIDE TEXTO----------------------------
 //----------CHECKBOX TEXTO SUPERIOR E INFERIOR--------------
 const checkTextTop= document.querySelector('#check-text-top');
 const pTextTop= document.querySelector('#p-text-top');
@@ -170,9 +171,7 @@ function bgTextTransparent() {
 checkboxTransparentBg.addEventListener('click', bgTextTransparent);
 
 //--------------------- INTERLENEADO --------------------
-
 const selectLineHeight = document.getElementById("select_line-height");
-
 
 const applyLineHeight = (event) => {
     event.preventDefault();
@@ -261,7 +260,6 @@ const changeAlignTextCenter=()=>{
 }
 textAlignCenter.addEventListener('click', changeAlignTextCenter);
 
-
 const changeAlignTextRight=()=>{
     pTextTop.style.justifyContent =`flex-end`;
     pTextBottom.style.justifyContent=`flex-end`;
@@ -277,7 +275,6 @@ const buttonshadowTextBlack= document.querySelector('#shadow-text-black');
 const noneShadowText=()=>{
     pTextTop.style.textShadow= "none";
     pTextBottom.style.textShadow= "none";
-
 }
 buttonshadowTextNone.addEventListener('click', noneShadowText);
 
@@ -286,7 +283,6 @@ const whiteShadowText=()=>{
     pTextBottom.style.textShadow= "2px 2px 1px #FFFFFF ";
 }
 buttonshadowTextWhite.addEventListener('click', whiteShadowText);
-
 
 const blackShadowText=()=>{
     pTextTop.style.textShadow= "2px 2px 1px #000000";

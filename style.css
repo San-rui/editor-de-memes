@@ -9,14 +9,23 @@ src:url(/web-fonts/TTF/Atkinson-Hyperlegible-Regular-102.ttf);
 body.dark-mode{
     --background-color-header: #0F213F;
     --color:#FFFFFF;
-    --background-color-hover: #1F4F72;
     --background-color-body: #042f50;
     --background-color-aside: #224763;
+    --background-color-hover: #1F4F72;
+    --background-color-hover2: #2C5779;
+    --border:1px solid #FFFFFF;
 }
+
 body.light-mode{
     --background-color-header: #FFFFFF;
     --color:#224763;
+    --background-color-body: #F2F2F2;
+    --background-color-aside: #EAEFF5;
+    --background-color-hover: #E1EEFB;
+    --background-color-hover-color2: #cee4f5;
 }
+
+
 body{
     display: flex;
     flex-direction: column;
@@ -24,12 +33,14 @@ body{
     background-color: var(--background-color-body);
     font-family: Arial, Helvetica, sans-serif;
 }
+
 main{
     width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 header{
     width:100%;
     height: 100px;
@@ -42,7 +53,11 @@ header{
     padding-top:5px;
 }
 
-i{
+input{
+    outline: none;
+}
+
+.i-nav{
     margin-right: 5px;
 }
 /* ----ASIDE TEXTO STYLE  */
@@ -67,10 +82,7 @@ i{
     display: flex;
     flex-direction: column;  
 }
-.input_color_for_text{
-    width: 90%;
-    height:30px;
-}
+
 .format-button-justify{
     margin-left: 7px;
     padding-left: 7px;
@@ -78,8 +90,27 @@ i{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border-radius: 2px;
+    border:none;
 }
+
+.container-color-picker-text{
+    background-color:white;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    color: #0F213F;
+    font-size: 0.9em;
+    width: 120px;
+    height: 30px;
+    border-radius: 2px;
+    border:none;
+    padding: 0px 7px;
+    margin-top: 10px;
+    
+}
+
 /* ----ASIDE IMAGE STYLE  */
 .aside-img{
     width:20%;
@@ -112,20 +143,28 @@ i{
 .size_input-select{
     width:45%;
     height: 30px;
+    border-radius: 2px;
+    border:none;
+    color:#0F213F;
 }
 .url-input{
     width:100%;
     height: 30px;
     margin-top: 7px;
     margin-bottom: 20px;
+    border-radius: 2px;
+    border:none;
+    padding-left: 7px;
 }
-.slider{
-    margin:6px 0;
-}
+
 .reset{
     width:60%;
     height: 30px;
     margin:25px 0;
+    border:none;
+    border-radius: 2px;
+    color:#0F213F;
+    background-color: white;
 }
 /*----- CARD DEL MEME----*/
 .meme-generator{
@@ -165,7 +204,7 @@ i{
 .style-text{
     width: 100%;
     font-size: 40px;
-    padding:40px 50px;
+    padding:35px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,9 +228,21 @@ i{
 .size_input-select_text{
     width:45%;
 }
-.height-30{
+.style-button-outline{
     height: 30px;
+    border-radius: 2px;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.3s;
 }
+.style-input{
+    height: 30px;
+    border-radius: 2px;
+    border:none;
+}
+
 .padding-7{
     padding-left: 7px;
 }
@@ -200,6 +251,7 @@ i{
 }
 .grow-1{
     flex-grow: 1;
+
 }
 .grow-3{
     flex-grow: 3;
@@ -210,13 +262,25 @@ i{
 .overflow{
     overflow: hidden;
 }
-input[type=color] {
-    border: 1px;
-    outline: none;
-    border-radius: 100%;
+
+.color-picker {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+.colorpicker-text-style{
+    font-size: 0.9em;
+    margin-left: 7px;
+    color:#0F213F;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
-    width: 20px;
-    height: 20px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
 }
 
 .style-button-nav{
@@ -227,18 +291,20 @@ input[type=color] {
     color:var(--color);
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    margin-right: 10px;
+    margin: 15px 10px 0px 10px;
     padding:5px;
+    transition-duration: 0.3s;
 }
 
 .style-button-nav:hover{
     background-color:var(--background-color-hover);
+    transition-duration: 0.3s;
 }
 
 .style-nav{
     display: flex;
     flex-direction:row;
+    justify-content:center;
 }
 
 .slide-input{
@@ -246,5 +312,13 @@ input[type=color] {
     margin-top: 10px;
 }
 
+.hover:hover{
+    background-color:var(--background-color-hover2);
+    color:black;
+    transition-duration: 0.3s;
+}
+input::placeholder {
+    color: var(--background-color-hover);
 
+}
 
