@@ -307,4 +307,20 @@ const changeMode=()=>{
 
 buttonMode.addEventListener('click', changeMode);
 
+//-----------------RESPONSIVE BREAKPOINT 1300PX------------
 
+//--------------------BOTON CLOSE------------------
+const buttonClose= document.querySelector('#button-close');
+const aside= document.querySelector('#aside');
+
+const showAside=()=>{
+    aside.style=`display:inline`
+}
+buttonImageAside.addEventListener('click', showAside);
+buttonTextAside.addEventListener('click', showAside);
+
+const closeAside=()=>{
+    aside.style=`display:none`;
+};
+
+buttonClose.addEventListener('click', closeAside)
