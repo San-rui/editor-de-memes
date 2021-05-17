@@ -37,7 +37,6 @@ body{
 }
 
 main{
-    width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +54,7 @@ header{
     padding-top:5px;
 }
 
-.i-nav{
+.i-margin{
     margin-right: 5px;
 }
 /* ----ASIDE TEXTO STYLE  */
@@ -176,8 +175,8 @@ header{
     flex-direction: column;
     align-items: center;
     background-color: white;
-    width: 37rem;
-    height:37rem;
+    width: 37em;
+    height:37em;
     margin:50px 0px;
     position: relative;
 }
@@ -207,7 +206,7 @@ header{
 .style-text{
     width: 100%;
     font-size: 3em;
-    padding:40px 50px;
+    padding:35px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,6 +339,19 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 
+.button-download-meme{
+    width: 15em;
+    height: 30px;
+    margin-bottom: 20px;
+    border:none;
+    border-radius: 2px;
+    background-color: rgba(63, 63, 196, 0.815);
+    color:white;
+}
+
+.button-download-meme:hover{
+    background-color: rgba(69, 69, 161, 0.815);
+}
 
 @media screen and (max-width:1300px){
     aside{
