@@ -54,6 +54,13 @@ header{
     padding-top:5px;
 }
 
+
+
+input{
+    outline:none;
+}
+
+
 .i-margin{
     margin-right: 5px;
 }
@@ -103,7 +110,7 @@ header{
     border-radius: 2px;
     border:none;
     padding: 0px 7px;
-    margin-top: 10px;
+    margin-top: 7px;
     flex-grow: 1;
 }
 
@@ -211,7 +218,6 @@ header{
     justify-content: center;
     align-items: center;
     color:black;
-
 }
 
 /*-------CLASES GENERALES --------*/
@@ -353,6 +359,10 @@ input[type="color"]::-webkit-color-swatch {
     background-color: rgba(69, 69, 161, 0.815);
 }
 
+.margin-top-15{
+    margin-top: 15px;
+}
+
 @media screen and (max-width:1300px){
     aside{
         display:none;
@@ -387,4 +397,41 @@ input[type="color"]::-webkit-color-swatch {
     .size_input-select{
         flex-grow:1;
     }
-}
+
+    main{
+        height:600px;
+    }
+
+    .meme-generator{
+        width:90%;
+        margin: 20px 0px;
+        height:80%;
+    }
+
+    .style-text{
+        padding:3% 1%;
+    }
+
+    @media screen and (max-width:320px){
+
+        h1{
+            font-size: 1.6em;
+            text-align: center;
+        }
+
+        header{
+            height:150px;
+            padding: 10px 10px;
+        }
+
+        .meme-generator{
+            width:90%;
+            margin: 20px 0px;
+            height:50%;
+        }
+
+        .style-text{
+            font-size: 1.5em;
+        }
+
+    }

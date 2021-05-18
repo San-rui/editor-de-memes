@@ -11,42 +11,42 @@
 <body class="dark-mode">
     <header>
             <h1>Generador de Memes</h1>
-            <nav class="style-nav">
-                <button type="button" id="button-image-aside" class="style-button-nav"><i class="far fa-file-image i-margin"></i>Imagen</button>
-                <button type="button" id="button-text-aside" class="style-button-nav"><i class="fas fa-font i-margin"></i>Texto</button>
-                <button type="button" id="button-mode" class="style-button-nav"> <i class="far fa-lightbulb i-margin"></i>
+            <nav class="style-nav" aria-label="menú de navegación">
+                <button type="button" id="button-image-aside" class="style-button-nav" aria-label="despliega panel lateral imagen"><i class="far fa-file-image i-margin"></i>Imagen</button>
+                <button type="button" id="button-text-aside" class="style-button-nav" aria-label="despliega panel lateral texto"><i class="fas fa-font i-margin"></i>Texto</button>
+                <button type="button" id="button-mode" class="style-button-nav" aria-label="cambia entre modo oscuro y claro"> <i class="far fa-lightbulb i-margin"></i>
                     <span id="mode-text">Modo oscuro</span>
                 </button>
             </nav>
     </header>
     <main>
-        <div class="meme-generator overflow">
-            <p id="p-text-top" class="style-text ">TOP TEXT</p>
-            <div src="" alt="" aria-label="Imagen de meme" id="img"></div>
+        <div class="meme-generator overflow" aria-label="generador de meme">
+            <p id="p-text-top" class="style-text">TOP TEXT</p>
+            <div src="" aria-label="Imagen de meme" id="img" aria-label="imagen de meme"></div>
             <p id="p-text-bottom" class="style-text">BOTTOM TEXT</p>
         </div>
-        <button type="button" class="button-download-meme"><i class="fas fa-download i-margin"></i>Descargar meme</button>
+        <button type="button" class="button-download-meme" aria-label="descargar meme"><i class="fas fa-download i-margin"></i>Descargar meme</button>
     </main>
     <aside id="aside">
-        <button type="button" class="button-close" id="button-close"><i class="fas fa-times"></i></button>
-        <section id="aside-img" class="aside-img">
+        <button type="button" class="button-close" id="button-close" aria-label="cierra panel lateral"><i class="fas fa-times"></i></button>
+        <section id="aside-img" class="aside-img" aria-label="panel lateral imagen">
             <h3 class="title-aside">IMAGEN</h3>
             <form>
                 <label for="">URL</label>
-                <input type="text" class="url-input hover" id="image-input">
+                <input type="text" class="url-input hover" id="image-input" aria-label="insertar imagen">
                 <label for="">FONDO</label>
                 <div class="container-background">
                     <div class="container-color size_input-select">
-                        <input type="color" class="input-color-style color-picker" id="colorPicked">
-                        <p id="hexadecimal" class="colorpicker-text-style">#FFFFFF</p>
+                        <input type="color" class="input-color-style color-picker" id="colorPicked" aria-label="seleción color fondo">
+                        <p id="hexadecimal" class="colorpicker-text-style" aria-label="color en hexadecimal">#FFFFFF</p>
                     </div>
-                    <select name="" id="select-blend" class="size_input-select hover">
-                        <option class="option-blend" value="normal">Ninguno</option>
-                        <option class="option-blend" value="lighten">Aclarar</option>
-                        <option class="option-blend" value="darken">Oscurecer</option>
-                        <option class="option-blend" value="difference">Diferencia</option>
-                        <option class="option-blend" value="luminosity">Luminosidad</option>
-                        <option class="option-blend" value="multiply">Multiplicar</option>
+                    <select name="" id="select-blend" class="size_input-select hover" aria-label="despliegle de opciones de fondo">
+                        <option class="option-blend" value="normal" aria-label="ninguno">Ninguno</option>
+                        <option class="option-blend" value="lighten" aria-label="aclarar">Aclarar</option>
+                        <option class="option-blend" value="darken" aria-label="oscurecer">Oscurecer</option>
+                        <option class="option-blend" value="difference" aria-label="diferencia">Diferencia</option>
+                        <option class="option-blend" value="luminosity" aria-label="luminosidad">Luminosidad</option>
+                        <option class="option-blend" value="multiply" aria-label="multiplicar">Multiplicar</option>
                     </select>
                 </div>
             </form>
@@ -55,109 +55,109 @@
                     <h2>Filtros</h2>
                     <div class="slidecontainer">
                         <label for="brightness-slider">BRILLO</label>
-                        <input type="range" class="slide-input" id="brightness-slider" min="0" max="1" value="1" step="0.1">
+                        <input type="range" class="slide-input" id="brightness-slider" min="0" max="1" value="1" step="0.1" aria-label="brillo">
                     </div>
                     <div class="slidecontainer">
                         <label for="opacity-slider">OPACIDAD</label>
-                        <input type="range" class="slide-input" id="opacity-slider" min="0" max="1" value="1" step="0.1">
+                        <input type="range" class="slide-input" id="opacity-slider" min="0" max="1" value="1" step="0.1" aria-label="opacidad">
                     </div>
                     <div class="slidecontainer">
                         <label for="contrast-slider">CONTRASTE</label>
-                        <input type="range" class="slide-input" id="contrast-slider" min="100" max="1000" value="100" step="1">
+                        <input type="range" class="slide-input" id="contrast-slider" min="100" max="1000" value="100" step="1" aria-label="contraste">
                     </div>
                     <div class="slidecontainer">
                         <label for="blur-slider">DESENFOQUE</label>
-                        <input type="range" class="slide-input" id="blur-slider" min="0" max="10" value="0" step="0.1">
+                        <input type="range" class="slide-input" id="blur-slider" min="0" max="10" value="0" step="0.1" aria-label="desenfoque">
                     </div>
                     <div class="slidecontainer">
                         <label for="grayscale-slider">ESCALA DE GRISES</label>
-                        <input type="range" class="slide-input" id="grayscale-slider" min="0" max="100" value="0" step="1">
+                        <input type="range" class="slide-input" id="grayscale-slider" min="0" max="100" value="0" step="1" aria-label="escala de grises">
                     </div>
                     <div class="slidecontainer">
                         <label for="sepia-slider">SEPIA</label>
-                        <input type="range" class="slide-input" id="sepia-slider" min="0" max="100" value="0" step="1">
+                        <input type="range" class="slide-input" id="sepia-slider" min="0" max="100" value="0" step="1" aria-label="sepia">
                     </div>
                     <div class="slidecontainer">
                         <label for="hue-rotation-slider">HUE</label>
-                        <input type="range" class="slide-input" id="hue-rotation-slider" min="0" max="359" value="0" step="1">
+                        <input type="range" class="slide-input" id="hue-rotation-slider" min="0" max="359" value="0" step="1" aria-label="hue">
                     </div>
                     <div class="slidecontainer">
                         <label for="saturation-slider">SATURACION</label>
-                        <input type="range" class="slide-input" id="saturation-slider" min="100" max="1000" value="100" step="10">
+                        <input type="range" class="slide-input" id="saturation-slider" min="100" max="1000" value="100" step="10" aria-label="saturación">
                     </div>
                     <div class="slidecontainer">
                         <label for="invert-slider">NEGATIVO</label>
-                        <input type="range" class="slide-input" id="invert-slider" min="0" max="100" value="0" step="0.1">
+                        <input type="range" class="slide-input" id="invert-slider" min="0" max="100" value="0" step="0.1" aria-label="negativo">
                     </div>
                 </div>
-                <button type="reset"  class="hover reset" id="button-reset">Reestablecer filtros</button>   
+                <button type="reset"  class="hover reset" id="button-reset" aria-label="restablecer filtros">Reestablecer filtros</button>   
             </form>
         </section>
-        <section id="aside-text" class="aside-text hidden">
+        <section id="aside-text" class="aside-text hidden" aria-label="panel lateral texto">
             <h3 class="title-aside">TEXTO</h3>
             <form class="form-text">
                 <label for="">SUPERIOR</label>
                 <input type="text"
-                placeholder="TOP TEXT" class="margin-top-bottom style-input padding-7 hover" id="input-text-top">
+                placeholder="TOP TEXT" class="margin-top-bottom style-input padding-7 hover" id="input-text-top" aria-label="texto superior">
                 <label>
-                    <input type="checkbox" id="check-text-top" class="check-button"/> Sin texto superior</label>
-                <label for="" class="margin-top-bottom">INFERIOR</label>
+                    <input type="checkbox" id="check-text-top" class="check-button" aria-label="checkbox sin texto superior"/> Sin texto superior</label>
+                <label for="" class="margin-top-15">INFERIOR</label>
                 <input type="text"
                 placeholder="BOTTOM TEXT"
-                class="margin-top-bottom style-input padding-7 hover" id="input-text-bottom">
+                class="margin-top-bottom style-input padding-7 hover" id="input-text-bottom" aria-label="texto inferior">
                 <label>
-                    <input type="checkbox" id="check-text-bottom" class="check-button"/> Sin texto inferior</label>
-                <label for="" class="margin-top-bottom">FUENTE</label>
-                <select name="" id="select-font" value="Impact" class="margin-top-bottom style-input padding-7 hover">
-                    <option value="Arial">Arial</option>
-                    <option value="Arialblack">Arial black</option>
-                    <option value="AmericanTypewriter">American Typewriter</option>
-                    <option value="AndaleMono">Andale Mono</option>
-                    <option value="ComicSansMS">Comic Sans MS</option>
-                    <option value="Helvetica">Helvetica</option>
-                    <option value="Impact" selected ="Impact">Impact</option>
-                    <option value="Verdana">Verdana</option>
-                    <option value="TimesNewRoman">Times New Roman</option>
+                    <input type="checkbox" id="check-text-bottom" class="check-button" aria-label="checkbox sin texto inferior"/> Sin texto inferior</label>
+                <label for="" class="margin-top-15">FUENTE</label>
+                <select name="" id="select-font" value="Impact" class="margin-top-bottom style-input padding-7 hover" aria-label="selección fuente">
+                    <option value="Arial" aria-label="arial">Arial</option>
+                    <option value="Arialblack" aria-label="arial black">Arial black</option>
+                    <option value="AmericanTypewriter" aria-label="american typewriter">American Typewriter</option>
+                    <option value="AndaleMono" aria-label="andale mono">Andale Mono</option>
+                    <option value="ComicSansMS" aria-label="comic sans ms">Comic Sans MS</option>
+                    <option value="Helvetica" aria-label="helvetica">Helvetica</option>
+                    <option value="Impact" selected ="Impact" aria-label="impact">Impact</option>
+                    <option value="Verdana" aria-label="verdana">Verdana</option>
+                    <option value="TimesNewRoman" aria-label="times new roman">Times New Roman</option>
                 </select>
                 <div class="margin-top-bottom flex">
-                    <input type="number" name="" id="input-font-size" value="40" min="12" max="" class="style-input grow-3 padding-7 hover">
-                    <button type="button" class="grow-1 format-button-justify hover" id="text-align-left"><i class="fas fa-align-left"></i></button>
-                    <button type="button" class="grow-1 format-button-justify hover" id="text-align-center"><i class="fas fa-align-center"></i></button>
-                    <button type="button" class="grow-1 format-button-justify hover" id="text-align-right"><i class="fas fa-align-right"></i></button>
+                    <input type="number" name="" id="input-font-size" value="40" min="12" max="" class="style-input grow-3 padding-7 hover" aria-label="tamaño fuente">
+                    <button type="button" class="grow-1 format-button-justify hover" id="text-align-left" aria-label="alineado izquierdo"><i class="fas fa-align-left"></i></button>
+                    <button type="button" class="grow-1 format-button-justify hover" id="text-align-center" aria-label="alineado centro"><i class="fas fa-align-center"></i></button>
+                    <button type="button" class="grow-1 format-button-justify hover" id="text-align-right" aria-label="alineado derecho"><i class="fas fa-align-right"></i></button>
                 </div>
                 <div class="container-color-fondo">
                     <div class="column grow-1"> 
-                        <label for="" >COLOR</label>
+                        <label for="" class="margin-top-15">COLOR</label>
                         <div class="container-color-picker-text">
-                            <input type="color" class="color-picker" id="color-picked-text">
-                            <p id="hexadecimal-color-text" class="colorpicker-text-style">#FFFFFF</p>
+                            <input type="color" class="color-picker" id="color-picked-text" aria-label="color fuente">
+                            <p id="hexadecimal-color-text" class="colorpicker-text-style" aria-label="color en hexadecimal">#FFFFFF</p>
                         </div>
                     </div>
                     <div class="column grow-1 margin-left">
-                        <label for="">FONDO</label>
+                        <label for="" class="margin-top-15">FONDO</label>
                         <div class="container-color-picker-text">
-                            <input type="color" class="style-input color-picker" id="background-color-picked-text">
-                            <p id="hexadecimal-background-color-text" class="colorpicker-text-style">#FFFFFF</p>
+                            <input type="color" class="style-input color-picker" id="background-color-picked-text" aria-label="color fondo fuente">
+                            <p id="hexadecimal-background-color-text" class="colorpicker-text-style" aria-label="color en hexadecimal">#FFFFFF</p>
                         </div>
                     </div>
                 </div>
-                <label><input type="checkbox" class="margin-top-bottom" id="checkbox_transparent-bg"/> Fondo transparente</label>
-                <label for="">CONTORNO</label>
+                <label><input type="checkbox" class="margin-top-bottom" id="checkbox_transparent-bg" aria-label="checkbox fondo transparente"/> Fondo transparente</label>
+                <label for="" class="margin-top-15">CONTORNO</label>
                 <div class="margin-top-bottom flex">
-                    <button type="button" class="style-button-outline grow-1 hover" value="none" id="shadow-text-none">Ninguno</button>
-                    <button type="button" class="style-button-outline grow-1 margin-sides hover" value="white"id="shadow-text-white">Claro</button>
-                    <button type="button" class="style-button-outline grow-1 hover" value="black" id="shadow-text-black">Oscuro</button>
+                    <button type="button" class="style-button-outline grow-1 hover" value="none" id="shadow-text-none" aria-label="ninguno">Ninguno</button>
+                    <button type="button" class="style-button-outline grow-1 margin-sides hover" value="white"id="shadow-text-white" aria-label="claro">Claro</button>
+                    <button type="button" class="style-button-outline grow-1 hover" value="black" id="shadow-text-black" aria-label="oscuro">Oscuro</button>
                 </div>
-                <label for="">ESPACIADO</label>
-                <input type="number" name="" id="input-spacing" value="35" min="10" max="50" class="margin-top-bottom style-input padding-7 hover">
-                <label for="">INTERLINEADO</label>
-                <select name="" id="select_line-height" class="margin-top-bottom style-input padding-7 hover">
-                    <option value="opt08">0.8</option>
-                    <option value="opt1">1</option>
-                    <option value="opt12">1.2</option>
-                    <option value="opt15">1.5</option>
-                    <option value="opt2">2</option>
-                    <option value="opt25">2.5</option>
+                <label for="" class="margin-top-15">ESPACIADO</label>
+                <input type="number" name="" id="input-spacing" value="35" min="10" max="50" class="margin-top-bottom style-input padding-7 hover" aria-label="selección espaciado">
+                <label for="" class="margin-top-15">INTERLINEADO</label>
+                <select name="" id="select_line-height" class="margin-top-bottom style-input padding-7 hover" aria-label="selección interlineado">
+                    <option value="opt08" aria-label="0.8">0.8</option>
+                    <option value="opt1" aria-label="1">1</option>
+                    <option value="opt12" aria-label="1.2">1.2</option>
+                    <option value="opt15" aria-label="1.5">1.5</option>
+                    <option value="opt2" aria-label="2">2</option>
+                    <option value="opt25" aria-label="2.5">2.5</option>
                 </select>
             </form>
         </section>
