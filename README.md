@@ -1,7 +1,6 @@
-# editor-de-memes
-TP 2 - Editor de memes
+# Editor de memes
 
-En este proyecto hemos realizado un editor para generar memes. 
+En este proyecto hemos realizado un editor para generar memes: https://san-rui.github.io/editor-de-memes/
 
 Lo hemos hecho entre: 
 
@@ -25,66 +24,70 @@ El diseño que debimos seguir es el siguiente que encontrarán aquí: https://fr
 
 Las funcionalidades que hemos tenido que darle al editor de memes han sido las siguientes:
 
-Funcionalidades
-•	Meme
-•	Alternar entre paneles
-•	Abrir y cerrar panel
-•	Descargar imagen
-•	Modo claro y modo oscuro
+Funcionalidades:
+- Meme
+- Alternar entre paneles
+- Abrir y cerrar panel
+- Descargar imagen
+- Modo claro y modo oscuro
 
-Imagen
-•	Agregar imagen con url
-•	Cambiar color de fondo
-•	Cambiar modo de mezcla de fondo
-o	Aclarar
-o	Oscurecer
-o	Diferencia
-o	Luminosidad
-o	Multiplicar
+Imagen: 
+- Agregar imagen con url 
+- Cambiar color de fondo
+- Cambiar modo de mezcla de fondo: Aclarar - Oscurecer - Diferencia - Luminosidad - Multiplicar
 
 
-•	Cambiar filtros
-ETIQUETA	           PROPIEDAD	     MÍNIMO	 MÁXIMO	 INTERVALO	 INICIAL
-Brillo	             brightness	       0	      1	      0.1	       1
-Opacidad	           opacity	         0	      1	      0.1	       1
-Contraste	           contrast	        100%	   1000%	   1%	      100%
-Desenfoque	         blur	             0px	    10px	  0.1px	     0px
-Escala de grises	   grayscale	       0%	      100%	   1%	       0%
-Sepia	               sepia	           0%	      100%	   1%  	     0%
-Hue	                 hue-rotation	     0deg	   359deg	  1deg	     0deg
-Saturación	         saturation     	 100%	    1000%	   10%	     100%
-Negativo	           invert	            0	      100	     0.1	     1
+Cambiar filtros: 
+- Brillo (PROPIEDAD: brightness	MÍNIMO:0  MÁXIMO:1 INTERVALO: 0.1 INICIAL:1)
+
+- Opacidad (PROPIEDAD: opacity MÍNIMO:0  MÁXIMO:1 INTERVALO:0.1  INICIAL:1)
+
+- Contraste (PROPIEDAD: contrast MÍNIMO:100%  MÁXIMO:1000% INTERVALO:1% INICIAL:100%)
+
+- Desenfoque (PROPIEDAD: blur MÍNIMO:0px  MÁXIMO:10px INTERVALO:0.1px INICIAL:0px)
+
+- Escala de grises (PROPIEDAD: grayscale MÍNIMO:0%  MÁXIMO:100% INTERVALO:1% INICIAL:0%)
+
+- Sepia (PROPIEDAD: sepia MÍNIMO:0% MÁXIMO:100% INTERVALO:1% INICIAL:0%)
+
+ - Hue (PROPIEDAD: hue-rotation MÍNIMO:0deg MÁXIMO:359deg INTERVALO:1deg INICIAL:0deg)
+
+- Saturación (PROPIEDAD: saturation MÍNIMO:100% MÁXIMO:1000% INTERVALO:10% INICIAL:100%)
+
+- Negativo (PROPIEDAD: invert MÍNIMO:0 MÁXIMO:100 INTERVALO:0.1 INICIAL:1)
+
 					
-•	Restablecer filtros
+•Restablecer filtros
 
-Texto
-•	Editar texto superior
-•	Remover texto superior
-•	Editar texto inferior
-•	Remover texto inferior
-•	Cambiar familia de fuente
-•	Cambiar tamaño de fuente
-•	Cambiar alineación
-•	Cambiar color de texto
-•	Cambiar color de fondo de texto
-•	Fondo transparente
-•	Cambiar padding de texto (Espaciado)
-•	Cambiar alto de línea de texto (Interlineado)
+Texto:
+- Editar texto superior
+- Remover texto superior 
+- Editar texto inferior 
+- Remover texto inferior
+- Cambiar familia de fuente
+- Cambiar tamaño de fuente 
+- Cambiar alineación
+- Cambiar color de texto
+- Cambiar color de fondo de texto
+- Fondo transparente
+- Cambiar padding de texto (Espaciado)
+- Cambiar alto de línea de texto (Interlineado)
 
-♿️ Accesibilidad
+♿️ Accesibilidad:
 
 Básica
-•	Los colores tienen un contraste adecuado
-•	La página tiene la información meta correspondiente
-•	La página tiene una semántica correcta
-•	Los íconos y elementos que no presentan texto agregan la información correspondiente por otros medios (etiquetas aria-label)
+- Los colores tienen un contraste adecuado
+- La página tiene la información meta correspondiente
+- La página tiene una semántica correcta
+- Los íconos y elementos que no presentan texto agregan la información correspondiente por otros medios (etiquetas aria-label)
 
 Avanzada
-•	La página puede ser navegada con el teclado correctamente
-•	Siempre hay un foco visible
-o	Cuando un elemento está oculto (modales, carrito, productos), no debe poder moverse el foco a elementos del mismo
-o	Cuando se abre el panel, el foco salta al botón de cierre del mismo
-o	Cuando se cierra el panel, el foco salta al botón de apertura del mismo
+- La página puede ser navegada con el teclado correctamente
+- Siempre hay un foco visible
+- Cuando un elemento está oculto (modales, carrito, productos), no debe poder moverse el foco a elementos del mismo
+- Cuando se abre el panel, el foco salta al botón de cierre del mismo
+- Cuando se cierra el panel, el foco salta al botón de apertura del mismo
+
 
 Estas funcionalidades son todas las que podrás utilizar con este editor de memes. Tanto para modificar dinámicamente la imagen como el texto. Luego al finalizar, puedes descargártelo con el botón de “Descargar meme”(*).
 
