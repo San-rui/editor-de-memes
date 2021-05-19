@@ -52,9 +52,8 @@ header{
     align-items: center;
     flex-direction: column;
     padding-top:5px;
+    margin-bottom: 50px;
 }
-
-
 
 input{
     outline:none;
@@ -85,7 +84,7 @@ input{
     flex-direction:row;
 }
 
-/* ----ASIDE TEXTO STYLE  */
+/*--------ASIDE TEXTO STYLE----------*/
 .aside-text{
     width:300px;
     height: 100%;
@@ -140,7 +139,7 @@ input{
     width:100%;
 }
 
-/* ----ASIDE IMAGE STYLE  */
+/*-----ASIDE IMAGE STYLE--------*/
 .aside-img{
     width:300px;
     height: 100%;
@@ -152,23 +151,26 @@ input{
     position:fixed;
     top:0px;
     right: 0px;
-    
 }
+
 .hidden{
     display:none;
 }
+
 .slidecontainer{
     font-size: 0.9em;
     display: flex;
     flex-direction: column;
     margin-top: 15px;
 }
+
 .container-background{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
     margin-top: 7px;
 }
+
 .size_input-select{
     width:45%;
     height: 30px;
@@ -176,6 +178,7 @@ input{
     border:none;
     color:#0F213F;
 }
+
 .url-input{
     width:100%;
     height: 30px;
@@ -184,9 +187,12 @@ input{
     border-radius: 2px;
     border:none;
 }
-.slider{
-    margin:6px 0;
+
+.slide-input{
+    height: 5px;
+    margin-top: 10px;
 }
+
 .reset{
     width:60%;
     height: 30px;
@@ -196,7 +202,8 @@ input{
     color:#0F213F;
     background-color: white;
 }
-/*----- CARD DEL MEME----*/
+
+/*------- CARD DEL MEME---------*/
 .meme-generator{
     display: flex;
     justify-content: center;
@@ -205,14 +212,15 @@ input{
     background-color: white;
     width: 37em;
     height:37em;
-    margin:50px 0px;
     position: relative;
 }
+
 .image-box-style{
     width: 600px;
     height: 370px;
     background-color: black;
 }
+
 .container-color{
     background-color:white;
     display: flex;
@@ -220,6 +228,7 @@ input{
     justify-content: center;
     align-items: center;
 }
+
 #img {
     width:100%;
     height: 100%;
@@ -231,6 +240,7 @@ input{
     display: flex;
     flex-grow: 1;
 }
+
 .style-text{
     width: 100%;
     font-size: 3em;
@@ -245,6 +255,7 @@ input{
 .margin-top-bottom{
     margin: 7px 0px;
 }
+
 .column{
     display: flex;
     flex-direction: column;
@@ -255,13 +266,14 @@ input{
 }
 
 .row{
-
     display: flex;
     flex-direction: row;
 }
+
 .size_input-select_text{
     width:45%;
 }
+
 .style-input{
     height: 30px;
     border-radius: 2px;
@@ -299,24 +311,19 @@ input{
     overflow: hidden;
     border: 1px solid transparent;
 }
+
 .colorpicker-text-style{
     font-size: 0.9em;
     margin-left: 7px;
     color:#0F213F;
 }
+
 input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
 }
 
 input[type="color"]::-webkit-color-swatch {
     border: none;
-}
-
-
-
-.slide-input{
-    height: 5px;
-    margin-top: 10px;
 }
 
 .hover:hover{
@@ -330,6 +337,14 @@ input[type="color"]::-webkit-color-swatch {
     height:30px;
     border-radius: 2px;
     background-color:white;
+}
+
+.margin-top-15{
+    margin-top: 15px;
+}
+
+.i-margin{
+    margin-right: 5px;
 }
 
 .button-close{
@@ -353,6 +368,7 @@ input[type="color"]::-webkit-color-swatch {
     width: 15em;
     height: 30px;
     margin-bottom: 20px;
+    margin-top: 50px;
     border:none;
     border-radius: 2px;
     background-color: rgba(63, 63, 196, 0.815);
@@ -361,14 +377,6 @@ input[type="color"]::-webkit-color-swatch {
 
 .button-download-meme:hover{
     background-color: rgba(69, 69, 161, 0.815);
-}
-
-.margin-top-15{
-    margin-top: 15px;
-}
-
-.i-margin{
-    margin-right: 5px;
 }
 
 @media screen and (max-width:1300px){
@@ -393,6 +401,7 @@ input[type="color"]::-webkit-color-swatch {
     .aside-img{
         width: 100%;
     }
+
     .aside-text{
         width: 100%;
     }
@@ -402,6 +411,7 @@ input[type="color"]::-webkit-color-swatch {
         padding-left: 5px;
         margin-right: 10px;
     }
+    
     .size_input-select{
         flex-grow:1;
     }
