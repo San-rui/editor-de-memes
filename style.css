@@ -60,10 +60,31 @@ input{
     outline:none;
 }
 
-
-.i-margin{
-    margin-right: 5px;
+/*--------BARRA DE NAVEGACION--------*/
+.style-button-nav{
+    height: 25px;
+    border:none;
+    border-radius: 2px;
+    background-color: transparent;
+    color:var(--color);
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding:5px;
+    transition-duration: 0.3s;
 }
+
+.style-button-nav:hover{
+    background-color:var(--background-color-hover);
+    transition-duration: 0.3s;
+}
+
+.style-nav{
+    display: flex;
+    flex-direction:row;
+}
+
 /* ----ASIDE TEXTO STYLE  */
 .aside-text{
     width:300px;
@@ -245,24 +266,28 @@ input{
     height: 30px;
     border-radius: 2px;
     border:none;
-
 }
 
 .padding-7{
     padding-left: 7px;
 }
+
 .flex{
     display: flex;
 }
+
 .grow-1{
     flex-grow: 1;
 }
+
 .grow-3{
     flex-grow: 3;
 }
+
 .margin-sides{
     margin: 0px 7px;
 }
+
 .overflow{
     overflow: hidden;
 }
@@ -287,29 +312,7 @@ input[type="color"]::-webkit-color-swatch {
     border: none;
 }
 
-.style-button-nav{
-    height: 25px;
-    border:none;
-    border-radius: 2px;
-    background-color: transparent;
-    color:var(--color);
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    margin-right: 10px;
-    padding:5px;
-    transition-duration: 0.3s;
-}
 
-.style-button-nav:hover{
-    background-color:var(--background-color-hover);
-    transition-duration: 0.3s;
-}
-
-.style-nav{
-    display: flex;
-    flex-direction:row;
-}
 
 .slide-input{
     height: 5px;
@@ -321,6 +324,7 @@ input[type="color"]::-webkit-color-swatch {
     color:var(--color);
     transition-duration: 0.3s;
 }
+
 .style-button-outline{
     border:none;
     height:30px;
@@ -340,10 +344,10 @@ input[type="color"]::-webkit-color-swatch {
     background-color: transparent;
     border:none;
 }
+
 .button-close:hover{
     background-color: var(--background-color-hover-colorX);
 }
-
 
 .button-download-meme{
     width: 15em;
@@ -361,6 +365,10 @@ input[type="color"]::-webkit-color-swatch {
 
 .margin-top-15{
     margin-top: 15px;
+}
+
+.i-margin{
+    margin-right: 5px;
 }
 
 @media screen and (max-width:1300px){
@@ -411,7 +419,7 @@ input[type="color"]::-webkit-color-swatch {
     .style-text{
         padding:3% 1%;
     }
-
+}
     @media screen and (max-width:320px){
 
         h1{

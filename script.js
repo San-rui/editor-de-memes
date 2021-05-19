@@ -325,3 +325,15 @@ const closeAside=()=>{
 
 buttonClose.addEventListener('click', closeAside)
 
+//--------------BOTON DESCARGAR IMAGE------------
+const memeGenerator= document.querySelector('#meme-generator');
+const buttonDownloadMeme= document.querySelector('#button-download-meme');
+
+const downloadMeme = () => {
+	domtoimage.toBlob(memeGenerator)
+    .then(function (blob) {
+        window.saveAs(blob, 'my-meme.png');
+    });
+}
+
+buttonDownloadMeme.addEventListener('click', downloadMeme)
